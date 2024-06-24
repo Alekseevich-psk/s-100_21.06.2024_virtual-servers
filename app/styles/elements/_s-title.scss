@@ -1,4 +1,15 @@
 .s-title {
-    span {
+    font-family: $fontSecond, sans-serif;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 100%;
+    color: #000a14;
+
+    @include for-tablet {
+
+    }
+
+    @include for-mobile {
+        
     }
 }

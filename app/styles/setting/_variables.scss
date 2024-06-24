@@ -1,11 +1,26 @@
-$fontMain: 'Roboto';
-// $fontSecond: 'Roboto';
+$fontMain: 'Inter';
+$fontSecond: 'Orbitron';
 
-$active: #fff;
-$activeHover: #fff;
-$activeVisited: #fff;
+$active: #49a6ff;
+$activeHover: #6bb7ff;
+$activeVisited: #0675dd;
 
 $white: #fff;
-$black: #242424;
+$black: #000a14;
 
 $transition: 0.25s;
+
+:root {
+    --pdWrapper: 60px 44px;
+    --pdCard: 30px 35px;
+
+    @include for-tablet {
+        --pdWrapper: 40px 26px;
+        --pdCard: 20px 28px;
+    }
+
+    @include for-mobile {
+        --pdWrapper: 32px 20px;
+        --pdCard: 16px 20px;
+    }
+}
