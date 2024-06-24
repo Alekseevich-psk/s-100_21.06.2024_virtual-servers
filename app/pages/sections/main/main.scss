@@ -1,3 +1,81 @@
 .main {
-    background-color: rgb(184, 184, 184);
+    padding: 0;
+
+    --pdContainer: 240px 20px 240px;
+
+    @include for-tablet {
+        --pdContainer: 160px 20px 240px;
+    }
+
+    @include for-mobile {
+        --pdContainer: 100px 10px 180px;
+    }
+
+    &__container {
+        padding: var(--pdContainer) !important;
+    }
+
+    &__wrap-text {
+        max-width: 1000px;
+    }
+
+    &__title {
+        font-family: $fontSecond, sans-serif;
+        font-weight: 900;
+        font-size: 70px;
+        line-height: 100%;
+        color: #000a14;
+        margin-bottom: 60px;
+
+        @include for-tablet {
+            font-size: 54px;
+        }
+
+        @include for-mobile {
+            font-size: 40px;
+            margin-bottom: 26px;
+        }
+    }
+
+    &__wrap-desc {
+        @include flex-wrap();
+    }
+
+    &__inner {
+        width: calc(50% - 22px);
+        margin-bottom: 36px;
+        padding-right: 10px;
+        margin-right: 22px;
+        color: $black;
+        border-right: 1px solid $black;
+
+        &:nth-child(2),
+        &:nth-child(4) {
+            border-right: none;
+        }
+
+        &--button {
+            @include for-mobile {
+                padding-top: 12px;
+            }
+        }
+
+        @include for-mobile {
+            width: 100%;
+            margin-right: 0;
+            border-right: none;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: "Inter", sans-serif;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 130%;
+
+            @include for-mobile {
+                font-size: 16px;
+            }
+        }
+    }
 }
