@@ -1,0 +1,7 @@
+.next-section {
+    padding: 72px 64px 0;
+
+    @include for-tablet {
+        padding: 40px 0 0;
+    }
+}

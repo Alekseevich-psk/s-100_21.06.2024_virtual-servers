@@ -1,7 +1,8 @@
 .our-products {
+    padding-top: 110px;
 
     &__s-title {
-        margin-bottom: 110px;
+        margin-bottom: 80px;
 
         @include for-sm-desktop {
             margin-bottom: 80px;
@@ -30,13 +31,10 @@
     }
 
     &__next-section {
-        padding: 64px 120px 0;
-        padding-top: 64px;
         display: flex;
         justify-content: space-between;
 
         @include for-mobile {
-            padding: 40px 0 0;
             flex-direction: column;
             align-items: center;
         }
