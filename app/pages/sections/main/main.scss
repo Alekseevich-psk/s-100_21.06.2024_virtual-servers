@@ -1,9 +1,11 @@
 .main {
+    position: relative;
     padding: 0;
+    overflow-x: hidden;
 
     --pdContainer: 240px 20px 240px;
 
-    @include for-tablet {
+    @include for-sm-desktop {
         --pdContainer: 160px 20px 240px;
     }
 
@@ -11,8 +13,37 @@
         --pdContainer: 100px 10px 180px;
     }
 
+    &__bg {
+        position: absolute;
+        z-index: 1;
+        display: block;
+        width: 50vw;
+        height: 70%;
+        top: 53%;
+        right: 2%;
+        transition: 400ms;
+        transform: translateY(-50%);
+        background: url('../images/svg/bg-main.svg') no-repeat center / contain;
+    
+        @include for-sm-desktop {
+            transform: none;
+            top: auto;
+            right: 0;
+            bottom: 10%;
+        }
+
+        @include for-mobile {
+            width: 100%;
+            height: 50%;
+            bottom: 0;
+            right: -30%;
+        }
+    }
+
     &__container {
+        position: relative;
         padding: var(--pdContainer) !important;
+        z-index: 2;
     }
 
     &__wrap-text {
@@ -26,6 +57,7 @@
         line-height: 100%;
         color: #000a14;
         margin-bottom: 60px;
+        max-width: 900px;
 
         @include for-tablet {
             font-size: 54px;
@@ -38,6 +70,7 @@
     }
 
     &__wrap-desc {
+        transition: 400ms;
         @include flex-wrap();
     }
 
