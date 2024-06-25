@@ -1,0 +1,25 @@
+include data.pug
+
+section#our-products.our-products
+    .our-products__container.container 
+        h2.our-products__s-title.s-title Our Products
+        .our-products__wrapper 
+            each slide in priceSlides
+                .our-products__card-pr.card-pr
+                    .card-pr__title=slide.title
+                    .card-pr__old-price 
+                        .card-pr__old-price-value=slide.oldPrice
+                        .card-pr__old-price-info=slide.info
+                    .card-pr__price 
+                        p $ 
+                        span=slide.price 
+                        p /mo
+                    ul.card-pr__list 
+                        each val in slide.list 
+                            li.card-pr__item=val
+                    button(type="button").card-pr__button.button Choose Plan
+        .our-products__next-section.next-section
+            button(type="button").next-section__button.button--arrow
+            button(type="button").next-section__button.button.button--bg See all
+                            
+                        

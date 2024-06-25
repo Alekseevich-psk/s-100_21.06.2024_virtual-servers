@@ -20,9 +20,7 @@
         bg.style.opacity = String(0);
 
         idInterval = setInterval(() => {
-            console.log(lengthStr);
             el.innerHTML = str.slice(0, lengthStr - (lengthStr - i));
-
             i++;
 
             if (i > lengthStr) {

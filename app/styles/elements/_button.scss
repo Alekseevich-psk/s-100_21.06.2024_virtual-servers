@@ -13,8 +13,12 @@
     transition: $transition;
     text-align: center;
 
-    @include for-tablet {
+    @include for-sm-desktop {
         font-size: 24px;
+    }
+
+    @include for-tablet {
+        font-size: 22px;
     }
 
     @include for-mobile {
@@ -23,10 +27,53 @@
         width: 100%;
     }
 
-     &:hover {
+    &:hover {
         background-color: $black;
         color: $white;
-     }
+    }
 
-    &:active {}
+    &--bg {
+        background-color: $black;
+        color: $bgGrayWhite;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 100%;
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+    }
+
+    &--arrow {
+        cursor: pointer;
+        position: relative;
+        transition: $transition;
+        display: block;
+        width: 46px;
+        border-radius: 4px;
+        height: 46px;
+        background-color: $black;
+        border: 1px solid $black;
+
+        &::after {
+            position: absolute;
+            content: "";
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 50%;
+            background: url('../images/svg/ico-btn-arrow-next.svg') no-repeat center / contain;
+        }
+
+        &:hover {
+            background-color: $bgGrayWhite;
+
+            &::after {
+                background-image: url('../images/svg/ico-btn-arrow-next--black.svg');
+            }
+        }
+    }
 }

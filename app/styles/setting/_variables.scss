@@ -6,17 +6,20 @@ $activeHover: #6bb7ff;
 $activeVisited: #0675dd;
 
 $white: #fff;
+$bgGrayWhite: #F5F6F7;
 $black: #000a14;
 
 $transition: 0.25s;
 
 :root {
+    --pr: 14px;
     --pdWrapper: 60px 44px;
     --pdCard: 30px 35px;
 
     @include for-tablet {
         --pdWrapper: 40px 26px;
         --pdCard: 20px 28px;
+        --pr: 10px;
     }
 
     @include for-mobile {

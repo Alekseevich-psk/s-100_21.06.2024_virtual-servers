@@ -6,10 +6,10 @@
     color: #000a14;
 
     @include for-tablet {
-
+        font-size: 40px;
     }
 
     @include for-mobile {
-        
+        font-size: 32px;
     }
 }
