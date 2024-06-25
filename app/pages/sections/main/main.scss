@@ -6,7 +6,7 @@
     --pdContainer: 240px 20px 240px;
 
     @include for-sm-desktop {
-        --pdContainer: 160px 20px 240px;
+        --pdContainer: 160px 20px 190px;
     }
 
     @include for-mobile {
