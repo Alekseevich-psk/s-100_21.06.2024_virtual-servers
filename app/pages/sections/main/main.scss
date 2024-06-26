@@ -45,7 +45,7 @@
         position: relative;
         padding: var(--pdContainer) !important;
         z-index: 2;
-        border-bottom:1px solid rgba(101, 101, 101, 0.45);
+        border-bottom: var(--hr);
     }
 
     &__wrap-text {
