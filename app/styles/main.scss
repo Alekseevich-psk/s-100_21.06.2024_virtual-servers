@@ -14,7 +14,6 @@
 @import "./mixin/placeholder";
 @import "./mixin/position";
 @import "./mixin/pseudo";
-@import "./mixin/hr";
 @import "./mixin/res-ratio";
 
 @import "./fonts";
@@ -27,9 +26,13 @@
 @import "./elements/s-title";
 @import "./elements/sl-arrows";
 @import "./elements/card-pr";
+@import "./elements/card-sl";
 @import "./elements/next-section";
+@import "./elements/btn-link";
+@import "./elements/hr";
 
 @import "@Sections/main/main";
 @import "@Sections/our-products/our-products";
 @import "@Sections/subscribe/subscribe";
 @import "@Sections/about-us/about-us";
+@import "@Sections/solutions/solutions";

@@ -1,0 +1,74 @@
+.card-sl {
+    --pd: 32px 28px;
+    --footerHeight: 92px;
+
+    border-radius: 16px;
+    background-color: $bgGrayWhite;
+    box-shadow: $bsh;
+    overflow: hidden;
+
+    @include for-tablet {
+        --pd: 28px 20px;
+        --footerHeight: 60px;
+
+        border-radius: 12px;
+    }
+
+    @include for-mobile {
+        --footerHeight: 52px;
+        --pd: 20px 12px;
+    }
+
+    &__wrapper {
+        position: relative;
+        padding: var(--pd);
+        padding-bottom: 72px;
+        height: calc(100% - var(--footerHeight));
+
+        @include for-tablet {
+            padding-bottom: 58px;
+        }
+    }
+
+    &__title {
+        font-family: $fontSecond, sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 120%;
+        margin-bottom: 24px;
+        padding-right: 20px;
+
+        @include for-tablet {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__desc {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 140%;
+        padding-right: 32px;
+
+        @include for-tablet {
+            font-size: 14px;
+        }
+    }
+
+    &__footer {
+        background: #009bef;
+    }
+
+    &__align {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: right;
+        padding: var(--pd);
+    }
+
+    &__footer {
+        height: var(--footerHeight);
+    }
+}

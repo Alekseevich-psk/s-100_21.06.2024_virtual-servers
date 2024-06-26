@@ -1,4 +1,4 @@
-@mixin hr() {
+.hr {
     &::after {
         position: absolute;
         content: "";
@@ -11,7 +11,7 @@
 
     @include for-tablet {
         &::after {
-            bottom: -40px;
+            bottom: -50px;
         }
     }
 }

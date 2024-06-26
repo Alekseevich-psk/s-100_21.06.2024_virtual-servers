@@ -1,18 +1,5 @@
 .about-us {
-    padding-bottom: 80px;
     overflow: hidden;
-
-    @include for-tablet {
-        padding-bottom: 40px;
-    }
-
-    &__s-title {
-        margin-bottom: 62px;
-
-        @include for-mobile {
-            margin-bottom: 32px;
-        }
-    }
 
     &__container {
         position: relative;
@@ -61,8 +48,6 @@
         border-radius: var(--br);
         display: flex;
         flex-wrap: wrap;
-
-        @include hr();
     }
 
     &__inner {

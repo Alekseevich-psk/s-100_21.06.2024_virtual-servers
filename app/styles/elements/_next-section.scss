@@ -1,7 +1,30 @@
 .next-section {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
     padding: 72px 64px 0;
 
     @include for-tablet {
         padding: 40px 0 0;
+    }
+
+    @include for-mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button--bg {
+        padding: 14px 64px;
+
+        @include for-mobile {
+            padding: 14px 32px;
+        }
+    }
+
+    .button--arrow {
+        @include for-mobile {
+            display: none;
+        }
     }
 }

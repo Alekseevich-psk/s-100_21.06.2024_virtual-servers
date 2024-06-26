@@ -1,0 +1,19 @@
+include data.pug
+
+
+section.solutions#solutions
+    .solutions__container.container 
+        h2.solutions__s-title.s-title Solutions
+        .solutions__wrapper 
+            each slide in solutionsSlides 
+                .solutions__card-sl.card-sl
+                    .card-sl__wrapper 
+                        .card-sl__title!=slide.title  
+                        .card-sl__desc=slide.desc
+                        .card-sl__align 
+                            a(href="#", title="Learn more").card-sl__btn-link.btn-link Learn more 
+                    .card-sl__footer
+        .solutions__next-section.next-section
+            button(type="button").next-section__button.button--arrow
+            a(href="#").next-section__button.button.button--bg See all
+        .solutions__hr.hr

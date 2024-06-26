@@ -3,14 +3,14 @@
     padding: 0;
     overflow-x: hidden;
 
-    --pdContainer: 220px 20px 190px;
+    --pdContainer: 200px 20px 190px;
 
     @include for-sm-desktop {
-        --pdContainer: 160px 20px 190px;
+        --pdContainer: 160px 20px 160px;
     }
 
     @include for-mobile {
-        --pdContainer: 100px 10px 180px;
+        --pdContainer: 120px 10px 70px;
     }
 
     &__bg {

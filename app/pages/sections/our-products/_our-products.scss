@@ -1,5 +1,4 @@
 .our-products {
-    padding-top: 110px;
     overflow-x: hidden;
 
     &__container {
@@ -45,15 +44,6 @@
     &__s-title {
         position: relative;
         z-index: 2;
-        margin-bottom: 80px;
-
-        @include for-sm-desktop {
-            margin-bottom: 80px;
-        }
-
-        @include for-tablet {
-            margin-bottom: 60px;
-        }
     }
 
     &__wrapper {
