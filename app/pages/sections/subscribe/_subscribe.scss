@@ -1,11 +1,10 @@
 .subscribe {
-    padding-top: 0;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
 
     @include for-tablet {
         padding-bottom: 40px;
     }
-
+    
     &__container {
         position: relative;
         padding: 0;
@@ -14,29 +13,13 @@
         @include for-mobile {
             padding-bottom: 40px;
         }
-
-        
-        &::after {
-            position: absolute;
-            content: "";
-            display: block;
-            bottom: -60px;
-            width: 100%;
-            left: 0;
-            border-bottom: var(--hr);
-        }
-
-        @include for-tablet {
-            &::after {
-                bottom: -40px;
-            }
-        }
     }
 
     &__wrapper {
         padding: 64px 52px 100px;
         display: flex;
         justify-content: space-between;
+        @include hr();
 
         @include for-tablet {
             padding: 40px 20px 64px;

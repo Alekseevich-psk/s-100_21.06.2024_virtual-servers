@@ -1,0 +1,17 @@
+@mixin hr() {
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        bottom: -80px;
+        width: 100%;
+        left: 0;
+        border-bottom: var(--hr);
+    }
+
+    @include for-tablet {
+        &::after {
+            bottom: -40px;
+        }
+    }
+}

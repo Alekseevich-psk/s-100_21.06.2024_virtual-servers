@@ -1,0 +1,24 @@
+include data.pug
+
+
+section.about-us#about-us
+    .about-us__container.container 
+        h2.about-us__s-title.s-title About Us
+        .about-us__wrapper 
+            .about-us__inner.about-us__inner--picture   
+                .about-us__picture 
+                    img(src="./images/el-about-us.jpg", alt="")
+            .about-us__inner.about-us__inner--news
+                .about-us__title Guaranteed quality
+                .about-us__desc
+                    p We provide our clients with high-tech solutions in the field of turnkey communications and information technology: equipment placement in the data center.
+                    p Cloud cloud services based on the infrastructure of our data centers,network design and construction,supply of equipment and materials,provision of communication services,technical operation and support.
+                a(href="#", title="title").about-us__button.button.button--bg Learn more
+            .about-us__inner.about-us__inner--title For our customers
+            each item in newsSlides
+                .about-us__inner.about-us__inner--sub
+                    .about-us__title=item.title  
+                    .about-us__desc=item.desc
+            .about-us__next-section.next-section
+                button(type="button").next-section__button.button--arrow
+            

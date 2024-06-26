@@ -14,6 +14,7 @@
 @import "./mixin/placeholder";
 @import "./mixin/position";
 @import "./mixin/pseudo";
+@import "./mixin/hr";
 @import "./mixin/res-ratio";
 
 @import "./fonts";
@@ -31,3 +32,4 @@
 @import "@Sections/main/main";
 @import "@Sections/our-products/our-products";
 @import "@Sections/subscribe/subscribe";
+@import "@Sections/about-us/about-us";

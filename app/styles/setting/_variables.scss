@@ -7,11 +7,13 @@ $activeVisited: #0675dd;
 
 $white: #fff;
 $bgGrayWhite: #f5f6f7f1;
+$bsh: 5px 5px 18px 0 rgba(168, 168, 168, 0.45);;
 $black: #000a14;
 
 $transition: 0.25s;
 
 :root {
+    --br: 6px;
     --pr: 14px;
     --pdWrapper: 60px 44px;
     --pdCard: 30px 35px;
@@ -24,7 +26,7 @@ $transition: 0.25s;
     }
 
     @include for-mobile {
-        --pdWrapper: 32px 20px;
+        --pdWrapper: 20px 12px;
         --pdCard: 16px 20px;
     }
 }
