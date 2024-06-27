@@ -1,0 +1,154 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    &.open-menu {
+        @include for-mobile {
+            background-color: #F1F8FF;
+            box-shadow: $bsh;
+            overflow-y: scroll;
+            height: 100%;
+        }
+
+        .header {
+            &__inner {
+                &--contacts {
+                    display: block;
+                }
+
+                &--nav {
+                    display: block;
+                }
+            }
+
+            &__btn-menu {
+                background-size: 34px;
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M25.1309 8.86816L8.8674 25.1316' stroke='%23525254' stroke-linecap='round' /%3e%3cpath d='M9.22266 8.51465L25.4861 24.7781' stroke='%23525254' stroke-linecap='round' /%3e%3c/svg%3e");
+            }
+        }
+    }
+
+    &.scroll {
+        background-color: #F1F8FF;
+        box-shadow: $bsh;
+
+        .header__inner--contacts {
+            background-color: #F1F8FF;
+            border-bottom: 1px solid transparent;
+        }
+
+        @media(min-width: 768px) {
+    
+            .header__inner--nav {
+                opacity: 0;
+                padding: 0;
+                height: 0;
+            }
+        }
+    }
+
+    &__wrapper {
+        @include flex-wrap();
+    }
+
+    &__inner {
+
+        &--logo {
+            @include for-mobile {
+                display: flex;
+                width: 100%;
+                padding: 6px 0 !important;
+                justify-content: space-between;
+                border-bottom: 1px solid #656565;
+            }
+        }
+
+        &--contacts {
+            position: relative;
+            z-index: 2;
+            padding: 10px 0 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include for-mobile {
+                order: 2;
+                width: 100%;
+                display: none;
+            }
+        }
+
+        &--nav {
+            border-top: 1px solid #656565;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            padding-top: 12px;
+            transition: 0.1s;
+            display: flex;
+            justify-content: flex-end;
+            padding-bottom: 12px;
+
+            @include for-mobile {
+                display: none;
+                border: none;
+            }
+        }
+
+        @include for-mobile {
+            padding: 0;
+        }
+    }
+
+    &__logo {
+        width: 34px;
+        height: 30px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__contacts {
+
+        &-link {
+            font-weight: 400;
+            font-size: 16px;
+            margin-left: 44px;
+            color: $black;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            @include for-mobile {
+                display: block;
+                margin: 12px 0;
+                text-align: center;
+
+            }
+        }
+    }
+
+    &__btn-menu {
+        display: none;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        border-radius: 12px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='40' height='14' viewBox='0 0 40 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.75 1H39.25' stroke='%23525254' stroke-linecap='round'/%3e%3cpath d='M0.75 7H39.25' stroke='%23525254' stroke-linecap='round'/%3e%3cpath d='M0.75 13H39.25' stroke='%23525254' stroke-linecap='round'/%3e%3c/svg%3e ");
+
+        @include for-mobile {
+            display: block;
+        }
+    }
+}

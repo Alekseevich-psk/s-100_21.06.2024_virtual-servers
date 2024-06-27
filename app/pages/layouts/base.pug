@@ -8,6 +8,7 @@ html(lang="ru")
         link(rel="stylesheet", href="./css/main.css")
         title #{title}
     body 
+    include ./../components/header/header.pug
     block content
-    include ./../elements/scripts.pug
     include ./../components/footer/footer.pug
+    include ./../elements/scripts.pug

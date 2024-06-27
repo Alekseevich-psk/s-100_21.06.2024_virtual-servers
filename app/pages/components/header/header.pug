@@ -1,0 +1,21 @@
+include data.pug
+
+header.header#header 
+    .header__container.container 
+        .header__wrapper.header__wrapper
+            .header__inner.header__inner--logo
+                a(href="#" title="title").header__logo  
+                    img(src="./images/svg/ico-logo.svg" alt="")
+                button(type="button").header__btn-menu
+            .header__inner.header__inner--contacts 
+                each item in headerContacts
+                    a(href="#" title=item).header__contacts-link=item 
+            .header__inner.header__inner--nav
+                .header__menu.menu
+                    ul.menu__list
+                        each item in headerMenu 
+                            li.menu__item 
+                                a(href="#", title=item).menu__link=item
+                    .menu__buttons 
+                        a(href="#", title="title").menu__button.button Login 
+                        a(href="#", title="title").menu__button.button.button--bg Sign up 
