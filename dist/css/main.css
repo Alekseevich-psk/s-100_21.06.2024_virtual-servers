@@ -2698,10 +2698,6 @@ a {
   padding-bottom: 20px;
 }
 
-.news-reviews__next-section {
-  display: none;
-}
-
 .feedback {
   overflow: hidden;
 }
@@ -3076,6 +3072,10 @@ a {
 
   .news-reviews__card-rw {
     margin-bottom: 12px;
+  }
+
+  .news-reviews__next-section {
+    display: none;
   }
 
   .feedback__container::before {

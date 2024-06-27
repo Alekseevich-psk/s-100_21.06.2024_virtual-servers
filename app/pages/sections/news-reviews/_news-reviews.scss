@@ -117,7 +117,9 @@
     }
 
     &__next-section {
-        display: none;
+        @include for-tablet {
+            display: none;
+        }
     }
 
 }
