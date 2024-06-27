@@ -27,6 +27,7 @@
     &__wrapper {
         position: relative;
         z-index: 2;
+        border-radius: var(--brCard);
         box-shadow: $bsh;
         padding: var(--pdWrapper);
         background-color: $bgGrayWhite;
