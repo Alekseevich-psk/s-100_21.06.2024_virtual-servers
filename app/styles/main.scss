@@ -27,8 +27,11 @@
 @import "./elements/sl-arrows";
 @import "./elements/card-pr";
 @import "./elements/card-sl";
+@import "./elements/card-nw";
+@import "./elements/card-rw";
 @import "./elements/next-section";
 @import "./elements/btn-link";
+@import "./elements/c-rating";
 @import "./elements/hr";
 
 @import "@Sections/main/main";
@@ -36,3 +39,4 @@
 @import "@Sections/subscribe/subscribe";
 @import "@Sections/about-us/about-us";
 @import "@Sections/solutions/solutions";
+@import "@Sections/news-reviews/news-reviews";

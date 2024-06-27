@@ -1,0 +1,85 @@
+.card-rw {
+    background-color: $bgGrayWhite;
+    border-radius: var(--brCard);
+    box-shadow: $bsh;
+    padding: 30px 24px;
+
+    @include for-tablet {
+        padding: 25px 18px;
+    }
+
+    @include for-mobile {
+        padding: 20px 12px;
+    }
+
+    &__wrapper {
+        @include flex-wrap();
+    }
+
+    &__photo {
+        display: block;
+        width: 100px;
+        height: 100px;
+
+        @include for-tablet {
+            width: 76px;
+            height: 76px;
+        }
+
+        @include for-mobile {
+            width: 60px;
+            height: 60px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+
+    &__text {
+        width: calc(100% - 120px);
+
+        @include for-tablet {
+            width: calc(100% - 90px);
+        }
+
+        @include for-mobile {
+            width: calc(100% - 72px); 
+        }
+    }
+
+    &__c-rating {
+        margin-bottom: 16px;
+
+        @include for-tablet {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 130%;
+        color: $black;
+        margin-bottom: 12px;
+
+        @include for-tablet {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__content {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 130%;
+        color: $black;
+
+        @include for-tablet {
+            font-size: 14px;
+        }
+    }
+}

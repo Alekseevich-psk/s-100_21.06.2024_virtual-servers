@@ -1,0 +1,87 @@
+.card-nw {
+    padding: 24px 0;
+
+    @include for-tablet {
+        padding: 18px 0;
+    }
+
+    &__header {
+        margin-bottom: 20px;
+
+        @include for-tablet {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__title {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 130%;
+        width: calc(100% - 140px);
+
+        @include for-tablet {
+            font-size: 16px;
+        }
+    }
+
+    &__content {
+        p {
+            @include for-tablet {
+            }
+        }
+    }
+
+    &__content {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 130%;
+        color: $black;
+        padding-right: 40px;
+
+        @include for-tablet {
+            font-size: 14px;
+            padding-right: 20px;
+        }
+    }
+
+    &__info {
+        display: inline-block;
+        vertical-align: top;
+        width: 126px;
+        text-align: center;
+        font-weight: 500;
+        padding: 8px;
+        border-radius: 10px;
+        font-size: 14px;
+        line-height: 140%;
+
+        @include for-tablet {
+            font-size: 12px;
+            width: 116px;
+            margin-left: 18px;
+        }
+
+        &--reviews {
+            background: #49a6ff;
+        }
+
+        &--business-cases {
+            background: #9bef00;
+        }
+
+        &--instructions {
+            background: #ef009b;
+        }
+    }
+
+    &__align {
+        display: block;
+        padding-top: 12px;
+        text-align: right;
+
+        .btn-link {
+            font-size: 16px;
+        }
+    }
+}

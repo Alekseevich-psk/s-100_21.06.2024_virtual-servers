@@ -1,0 +1,37 @@
+include data.pug
+
+section.news-reviews#news-reviews
+    .news-reviews__container.container 
+        h2.news-reviews__s-title.s-title News And Reviwes
+        .news-reviews__wrapper 
+            .news-reviews__inner.news-reviews__inner--news
+                h3.news-reviews__title Latest News
+                each card in newsCards
+                    .news-reviews__card-nw.card-nw
+                        .card-nw__header 
+                            .card-nw__title=card.title
+                            - var classInfo=card.status
+                            div(class=`card-nw__info card-nw__info--${classInfo}`)
+                                p=card.statusText 
+                        .card-nw__content 
+                            p=card.content
+                        .card-nw__align 
+                            a(href="#" title="title").card-nw__btn-link.btn-link read news  
+                .news-reviews__align 
+                    a(href="#", title="title").news-reviews__btn-link.btn-link Go to all news
+            .news-reviews__inner.news-reviews__inner--reviews
+                h3.news-reviews__title Users Reviews
+                each card in reviewsSlides
+                    .news-reviews__card-rw.card-rw
+                        .card-rw__wrapper 
+                            .card-rw__photo 
+                                img(src=card.photo, alt=card.title)
+                            .card-rw__text 
+                                .card-rw__c-rating.c-rating
+                                    .c-rating__value(data-max-value=5)=card.rating 
+                                    .c-rating__wrapper    
+                                .card-rw__title=card.title 
+                                .card-rw__content=card.content
+                .news-reviews__align 
+                    a(href="#", title="title").news-reviews__btn-link.btn-link Go to all reviews
+
