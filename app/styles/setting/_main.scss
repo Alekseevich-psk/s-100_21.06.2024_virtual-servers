@@ -8,6 +8,27 @@ body {
     font-size: 16px;
     line-height: 120%;
     background-color: #F1F8FF;
+
+    & {
+        scrollbar-width: thin;
+        scrollbar-color: $active #F1F8FF;
+    }
+
+    &::-webkit-scrollbar {
+        height: 20px;
+        width: 8px;
+        border-radius: 4px !important;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 4px !important;
+        background: #F1F8FF;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $active;
+        border-radius: 4px !important;
+    }
 }
 
 * {
