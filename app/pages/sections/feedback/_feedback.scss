@@ -1,11 +1,35 @@
 .feedback {
+    overflow: hidden;
+
+    &__container {
+        &::before {
+            position: absolute;
+            content: "";
+            bottom: -80px;
+            left: -30%;
+            display: block;
+            width: 80%;
+            height: 60%;
+            background: url('../images/ico-plumb-8.png') no-repeat center / contain;
+        }
+
+        @include for-tablet {
+
+            &::before {
+                width: 100%;
+                background-position: left bottom;
+                left: -40%;
+                bottom: -50px;
+            }
+        }
+    }
 
     &__wrapper {
         position: relative;
+        z-index: 2;
         box-shadow: $bsh;
         padding: var(--pdWrapper);
         background-color: $bgGrayWhite;
-
         @include flex-wrap();
     }
 
