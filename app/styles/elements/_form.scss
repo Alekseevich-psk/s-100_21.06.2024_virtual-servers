@@ -1,0 +1,22 @@
+.form {
+
+    &__item {
+        margin-bottom: 16px;
+
+        &--button {
+            margin-top: 32px;
+        }
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 100%;
+
+        @include for-tablet {
+            font-size: 18px;
+        }
+    }
+}

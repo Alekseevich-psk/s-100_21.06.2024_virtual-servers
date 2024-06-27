@@ -1,0 +1,32 @@
+section.feedback#feedback
+    .feedback__container.container  
+        h2.feedback__s-title.s-title Still Got Questions?
+        .feedback__wrapper 
+            .feedback__inner.feedback__inner--main
+                .feedback__title Look up your questions in our knowledge base
+                .feedback__desc We’ve created a knowledge base with information about all of our products, how to set them up, and how to manage them. If you’re a developer, you can read about IT-infrastructure and stuff
+                .feedback__align    
+                    button(type="button").feedback__button.button.button--bg To Knowledge
+            .feedback__inner.feedback__inner--contacts
+                .feedback__title Contact us 
+                .feedback__desc You can always get a free consultation by calling us on 
+                .feedback__contacts 
+                    .feedback__contacts-item
+                        span tel:
+                        a(href="tel:+88888888888", title="title").feedback__link +8888 888 88 88
+                    .feedback__contacts-item
+                        span Telegram
+                        a(href="#", title="title").feedback__link @sup1
+                    .feedback__contacts-item
+                        span e-mail:
+                        a(href="mailto:support@sup1.com", title="title").feedback__link.feedback__link--mail support@sup1.com
+            .feedback__inner.feedback__inner--form
+                form(action="" method="post" class="feedback__form form")
+                    .form__item 
+                        input(type="text" class="form__input input" placeholder="Name" name="name" id="name")
+                    .form__item 
+                        input(type="text" class="form__input input" placeholder="your@mail.com" name="email" id="email")
+                    .form__item 
+                        textarea(name="comment", class="form__textarea textarea" placeholder="Type here")
+                    .form__item.form__item--button
+                        input(type="submit", value="Sent", class="form__button button in-fonts")

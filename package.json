@@ -8,7 +8,7 @@
         "url": "https://github.com/Alekseevich-psk/gulp-v5-starter/issues"
     },
     "scripts": {
-        "gulp" : "gulp",
+        "gulp": "gulp",
         "initHTML": "gulp switchMode --html",
         "initPUG": "gulp switchMode --pug",
         "initJS": "gulp switchMode --js",
@@ -55,6 +55,7 @@
         "yargs": "^17.7.2"
     },
     "dependencies": {
+        "imask": "^7.6.1",
         "swiper": "^11.1.1"
     }
 }
