@@ -1,0 +1,24 @@
+include data.pug
+
+footer.footer#footer
+    .footer__container.container 
+        .footer__wrapper 
+            .footer__inner 
+                .footer__title About
+                ul.footer__list 
+                    each item in aboutList
+                        li.footer__item 
+                            a(href="#" title=item).footer__link=item
+            .footer__inner 
+                .footer__title Products
+                ul.footer__list 
+                    each item in productsList
+                        li.footer__item 
+                            a(href="#" title=item).footer__link=item
+            .footer__inner 
+                .footer__title Solutions
+                ul.footer__list 
+                    each item in solutionsList 
+                        li.footer__item 
+                            a(href="#" title=item).footer__link=item
+        .footer__bg
