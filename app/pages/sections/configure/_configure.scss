@@ -1,0 +1,293 @@
+.configure {
+    overflow: hidden;
+    padding-bottom: 30px;
+
+    &__container {
+        &::after {
+            position: absolute;
+            z-index: 1;
+            content: "";
+            top: 0;
+            right: -5%;
+            display: block;
+            width: 50%;
+            height: 60%;
+            background: url('../images/ico-plumb-9.png') no-repeat center / contain;
+        }
+
+        @include for-tablet {
+            &::after {
+                bottom: 0;
+                right: -40%;
+                width: 140%;
+            }
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+        @include flex-wrap();
+
+        &--header {
+            margin-bottom: 52;
+
+            @include for-tablet {
+                margin-bottom: 36px;
+            }
+
+            @include for-mobile {
+                margin-bottom: 24px;
+            }
+
+            .configure__desc {
+                width: 55%;
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 130%;
+
+                @include for-sm-desktop {
+                    width: 100%;
+                    padding-right: 10%;
+                    font-size: 20px;
+                }
+
+                @include for-mobile {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &--form {
+            padding: var(--pdWrapper);
+            background-color: $bgGrayWhite;
+            box-shadow: $bsh;
+            border-radius: var(--brCard);
+        }
+    }
+
+    &__inner {
+
+        &--options {
+            width: 65%;
+            padding-right: 32px;
+            border-right: 1px solid #a8a8a8;
+
+            .configure__desc {
+                max-width: 480px;
+
+                @include for-tablet {
+                    margin-bottom: 26px;
+                }
+            }
+
+            @include for-tablet {
+                width: 100%;
+                border-right: none;
+                padding-right: 0;
+                border-bottom: 1px solid #a8a8a8;
+                padding-bottom: 20px;
+            }
+        }
+
+        &--res {
+            padding-left: 32px;
+            width: 35%;
+
+            .configure__title {
+                text-align: center;
+                margin-bottom: 54px;
+
+                @include for-tablet {
+                    margin-bottom: 36px;
+                }
+
+                @include for-mobile {
+                   margin-bottom: 20px;
+                }
+            }
+
+            .configure__desc {
+                max-width: 480px;
+                margin-bottom: 20px;
+            }
+
+            @include for-tablet {
+                padding-left: 0;
+                padding-top: 32px;
+                width: 100%;
+            }
+
+            @include for-mobile {
+                padding-top: 24px;
+            }
+        }
+    }
+
+    &__s-title {
+        width: 43%;
+
+        @include for-sm-desktop {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__desc {
+        font-weight: 300;
+        font-size: 18px;
+        margin-bottom: 42px;
+
+        @include for-tablet {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        @include for-mobile {
+            font-style: 14px;
+            margin-bottom: 18px;
+        }
+    }
+
+    &__title {
+        font-family: $fontSecond, sans-serif;
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 110%;
+        color: $black;
+        margin-bottom: 30px;
+
+        @include for-tablet {
+            font-size: 26px;
+            margin-bottom: 24px;
+        }
+
+        @include for-mobile {
+            font-size: 20px;
+            margin-bottom: 18px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 38px;
+
+        @include for-tablet {
+            margin-bottom: 20px;
+        }
+
+        &-title {
+            font-family: $fontSecond, sans-serif;
+            font-weight: 900;
+            font-size: 22px;
+            line-height: 110%;
+            margin-bottom: 24px;
+            max-width: 490px;
+
+            @include for-tablet {
+                font-size: 20px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &-button {
+            display: inline-block;
+            margin-right: 12px;
+            margin-bottom: 12px;
+
+            @include for-mobile {
+                margin-right: 8px;
+                margin-bottom: 12px;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__list {
+        padding-left: 32px;
+
+        li {
+            list-style-type: disc;
+            font-weight: 300;
+            font-size: 16px;
+            margin-bottom: 14px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__title-total {
+        padding-top: 36px;
+        font-weight: 900;
+        font-size: 22px;
+        line-height: 110%;
+        text-align: center;
+
+        @include for-tablet {
+            font-style: 18px;
+        }
+    }
+
+    &__price {
+        color: $black;
+        line-height: 120%;
+        margin: 20px 0 36px;
+        font-size: 0;
+        text-align: center;
+
+        @include for-mobile {
+            margin: 14px 0;
+        }
+
+        span {
+            display: inline-block;
+            font-weight: 900;
+            font-size: 44px;
+            padding: 0;
+            margin: 0;
+            line-height: 120%;
+
+            @include for-tablet {
+                font-size: 36px;
+            }
+
+            @include for-mobile {
+                font-size: 36px;
+            }
+        }
+
+        p {
+            display: inline-block;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 120%;
+            padding: 0;
+            margin: 0;
+
+            @include for-tablet {
+                font-size: 24px;
+            }
+
+            @include for-mobile {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__align {
+        text-align: center;
+    }
+
+    &__next-section {
+        padding: 0;
+
+        @include for-tablet {
+            display: none;
+            padding: 0;
+        }
+    }
+}

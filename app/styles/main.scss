@@ -32,6 +32,7 @@
 @import "./elements/next-section";
 @import "./elements/btn-link";
 @import "./elements/c-rating";
+@import "./elements/c-radio";
 @import "./elements/form";
 @import "./elements/menu";
 @import "./elements/hr";
@@ -39,10 +40,11 @@
 @import "@Components/header/header";
 @import "@Components/footer/footer";
 @import "@Components/btn-top/btn-top";
-@import "@Components/preloader/preloader";
+// @import "@Components/preloader/preloader";
 
 @import "@Sections/main/main";
 @import "@Sections/our-products/our-products";
+@import "@Sections/configure/configure";
 @import "@Sections/subscribe/subscribe";
 @import "@Sections/about-us/about-us";
 @import "@Sections/solutions/solutions";

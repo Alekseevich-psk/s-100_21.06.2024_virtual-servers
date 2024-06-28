@@ -1,0 +1,39 @@
+.c-radio {
+    display: none;
+
+    &~label {
+        user-select: none;
+        cursor: pointer;
+        display: inline-block;
+        padding: 18px 32px;
+        border: 1px solid $black;
+        border-radius: 4px;
+        font-weight: 300;
+        font-size: 22px;
+        text-align: center;
+        transition: $transition;
+
+        @include for-tablet {
+            font-size: 18px;
+            padding: 16px 20px;
+        }
+
+        @include for-mobile {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        &:hover {
+            color: $active;
+            border-color: $active;
+        }
+    }
+
+    &:checked ~ label {
+        background-color: $active;
+        color: $white;
+        font-weight: 300;
+        border: 1px solid $active;
+        box-shadow: 3px 3px 10px 0 rgba(168, 168, 168, 0.45);
+    }
+}
