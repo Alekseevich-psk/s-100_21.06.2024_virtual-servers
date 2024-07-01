@@ -3158,6 +3158,7 @@ a {
 .all-products {
   overflow: hidden;
   position: relative;
+  padding-bottom: 40px;
   --pd: 64px;
 }
 
@@ -3190,7 +3191,7 @@ a {
 }
 
 .all-products__ico-bg:nth-child(3) {
-  bottom: -80px;
+  bottom: -40px;
   width: 50%;
   height: 30%;
   left: -10%;
