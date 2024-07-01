@@ -1,6 +1,7 @@
 import './swiper.ts';
 import './c-rating.ts';
 import './imask.ts';
+import './btn-next-section.ts';
 
 import '@Components/preloader/preloader.ts';
 import '@Components/btn-top/btn-top.ts';
