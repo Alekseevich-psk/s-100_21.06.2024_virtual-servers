@@ -22,11 +22,11 @@
     &__wrapper {
         position: relative;
         padding: var(--pd);
-        padding-bottom: 72px;
+        padding-bottom: 80px;
         height: calc(100% - var(--footerHeight));
 
         @include for-tablet {
-            padding-bottom: 58px;
+            padding-bottom: 92px;
         }
     }
 
@@ -66,6 +66,18 @@
         width: 100%;
         text-align: right;
         padding: var(--pd);
+
+        &--left {
+            text-align: left;
+        }
+
+        .button {
+            font-size: 22px;
+
+            @include for-sm-desktop {
+                font-size: 18px;
+            } 
+        }
     }
 
     &__footer {

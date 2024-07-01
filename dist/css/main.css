@@ -1777,7 +1777,7 @@ a {
 .card-sl__wrapper {
   position: relative;
   padding: var(--pd);
-  padding-bottom: 72px;
+  padding-bottom: 80px;
   height: calc(100% - var(--footerHeight));
 }
 
@@ -1808,6 +1808,14 @@ a {
   width: 100%;
   text-align: right;
   padding: var(--pd);
+}
+
+.card-sl__align--left {
+  text-align: left;
+}
+
+.card-sl__align .button {
+  font-size: 22px;
 }
 
 .card-sl__footer {
@@ -3469,6 +3477,10 @@ a {
     font-size: 24px;
   }
 
+  .card-sl__align .button {
+    font-size: 18px;
+  }
+
   .main {
     --pdContainer: 160px 20px 160px;
   }
@@ -3556,7 +3568,7 @@ a {
   }
 
   .card-sl__wrapper {
-    padding-bottom: 58px;
+    padding-bottom: 92px;
   }
 
   .card-sl__title {
