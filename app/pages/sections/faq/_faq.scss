@@ -1,0 +1,167 @@
+.faq {
+    overflow: hidden;
+    position: relative;
+    transition: $transition;
+
+    &__ico-bg {
+        position: absolute;
+        top: -50px;
+        width: 60%;
+        height: 70%;
+        right: -15%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url('../images/ico-plumb-13.png');
+    }
+
+    &__wrapper {
+        align-items: center;
+        @include flex-wrap();
+        padding: var(--pdWrapper);
+        background-color: $bgGrayWhite;
+        box-shadow: $bsh;
+        border-radius: var(--brCard);
+        position: relative;
+        transition: $transition;
+    }
+
+    &__inner {
+        &--picture {
+            width: 40%;
+
+            @include for-tablet {
+                width: 100%;
+            }
+        }
+
+        &--questions {
+            width: 60%;
+
+            @include for-tablet {
+                width: 100%;
+            }
+        }
+    }
+
+    &__picture {
+        position: relative;
+        transition: $transition;
+        display: block;
+        margin: 0 auto;
+        max-width: 240px;
+        max-height: 420px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @include for-tablet  {
+            height: 160px;
+        }
+    }
+
+    &__header {
+        padding: 22px 0;
+    }
+
+    &__item {
+        position: relative;
+        padding: 0 22px;
+        margin-top: 2px;
+        user-select: none;
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            width: calc(100% - 40px);
+            left: 20px;
+            height: 1px;
+            background-color: $black;
+        }
+
+        @include for-mobile {
+            padding: 0 12px;
+
+            &::after {
+                width: calc(100% - 24px);
+                left: 12px;
+            }
+        }
+
+        &.active {
+            border-radius: var(--brCard);
+            background: rgba(197, 227, 255, 0.35);
+
+            .faq__title {
+                font-weight: 700;
+            }
+
+            .faq__ico {
+                transform: rotate(45deg);
+            }
+
+            .faq__content {
+                transition: $transition;
+                opacity: 1;
+                visibility: visible;
+                height: auto;
+                padding-bottom: 24px;
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__ico {
+        cursor: pointer;
+        background-color: transparent;
+        display: inline-block;
+        min-width: 18px;
+        max-width: 18px;
+        height: 18px;
+        background-repeat: no-repeat;
+        transition: $transition;
+        background-size: 100%;
+        background-position: center;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.7429 0.5C11.5713 0.5 12.2429 1.17157 12.2429 2L12.2429 20C12.2429 20.8284 11.5713 21.5 10.7429 21.5C9.91449 21.5 9.24292 20.8284 9.24292 20L9.24292 2C9.24292 1.17157 9.91449 0.5 10.7429 0.5Z' fill='black' /%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.5 11.2571C0.5 10.4287 1.17157 9.75708 2 9.75708H20C20.8284 9.75708 21.5 10.4287 21.5 11.2571C21.5 12.0855 20.8284 12.7571 20 12.7571H2C1.17157 12.7571 0.5 12.0855 0.5 11.2571Z' fill='black' /%3e%3c/svg%3e");
+
+        &:hover {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__title {
+        display: inline-block;
+        user-select: none;
+        padding-right: 60px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 120%;
+    }
+
+    &__content {
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+
+        p {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 140%;
+        }
+    }
+
+    &__next-section {
+        position: absolute;
+        bottom: 32px;
+        left: 0;
+    }
+}

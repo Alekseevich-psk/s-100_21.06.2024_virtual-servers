@@ -1,0 +1,22 @@
+include data.pug
+
+section.faq#faq
+    .faq__container.container 
+        .faq__icons 
+            .faq__ico-bg
+        h2.faq__s-title.s-title Help And Support
+        .faq__wrapper 
+            .faq__inner.faq__inner--picture
+                .faq__picture 
+                    img(src="./images/ico-faq.png", alt="")
+            .faq__inner.faq__inner--questions
+                each slide in faqSlides
+                    .faq__item 
+                        .faq__header 
+                            .faq__title=slide.title
+                            button(type="button").faq__ico 
+                        .faq__content 
+                            p=slide.content
+        .faq__next-section.next-section
+            button(type="button").next-section__button.button--arrow
+                
