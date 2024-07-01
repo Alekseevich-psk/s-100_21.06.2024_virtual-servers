@@ -15,7 +15,7 @@ header.header#header
                     ul.menu__list
                         each item in headerMenu 
                             li.menu__item 
-                                a(href="#", title=item).menu__link=item
+                                a(href=item.link, title=item).menu__link=item.title
                     .menu__buttons 
                         a(href="#", title="title").menu__button.button Login 
                         a(href="#", title="title").menu__button.button.button--bg Sign up 

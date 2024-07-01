@@ -1,0 +1,52 @@
+.breadcrumbs {
+    margin-bottom: 32px;
+
+    @include for-mobile {
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        font-size: 0;
+    }
+
+    &__item {
+        position: relative;
+        display: inline-block;
+        
+        &:after {
+            position: relative;
+            content: "/";
+            font-weight: 300;
+            font-size: 14px;
+        }
+
+        &:last-child {
+            &:after {
+                display: none;
+            }
+
+            .breadcrumbs__link {
+                &:hover {
+                    text-decoration: none;
+                    color: $black;
+                    cursor: initial;
+                }
+            }
+        }
+    }
+
+    &__link {
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        font-weight: 300;
+        font-size: 14px;
+        color: $black;
+
+        &:hover {
+            text-decoration: underline;
+            color: $active;
+        }
+    }
+
+}

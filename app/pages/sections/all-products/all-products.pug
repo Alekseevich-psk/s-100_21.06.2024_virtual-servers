@@ -1,0 +1,28 @@
+include data.pug
+
+section.all-products#all-products
+    .all-products__container.container 
+        .all-products__icons
+            .all-products__ico-bg
+            .all-products__ico-bg
+            .all-products__ico-bg
+        .all-products__breadcrumbs.breadcrumbs
+            include ../../components/breadcrumbs/breadcrumbs.pug
+        .all-products__wrapper 
+            .all-products__inner.all-products__inner--main 
+                h1.all-products__title Products and Solutions
+                .all-products__main-desc 
+                    p We keep the quality of our digital and cloud products at the highest level.
+            .all-products__hr.hr
+            each slide in allProgramsSlides
+                - var slideClass=slide.class
+                div(class=`all-products__inner all-products__inner--${slideClass}`)
+                    .all-products__picture  
+                        img(src=slide.img, alt=slide.title)
+                    .all-products__text
+                        h2.all-products__s-title.s-title=slide.title 
+                        .all-products__desc=slide.desc
+                        .all-products__align 
+                            a(href="#", title=slide.title ).all-products__button.button.button--bg Sign Up
+
+
