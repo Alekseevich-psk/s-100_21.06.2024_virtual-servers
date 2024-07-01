@@ -48,7 +48,7 @@
               <p>High download speed, short uptime, backups and everything you need for the successful growth of your business</p>
             </div>
             <div class="main__inner main__inner--button">   
-              <button class="main__button button button--outline" type="button">Rent a server</button>
+              <button class="main__button button button--outline" type="button" data-popup-title="Rent a server" data-popup-open>Rent a server</button>
             </div>
           </div>
         </div>
@@ -517,6 +517,40 @@
     <div class="preloader">
       <div class="preloader__overlay">
         <div class="preloader__element"></div>
+      </div>
+    </div>
+    <div class="popup active" id="popup">
+      <div class="popup__overflow"> 
+        <div class="popup__body"> 
+          <form class="popup__form" action="#" method="post">
+            <div class="popup__header">
+              <div class="popup__title">Get in touch</div>
+              <button class="popup__close" type="button">Close</button>
+            </div>
+            <div class="popup__item popup__item-hide"> 
+              <input type="text" name="title">
+              <input type="text" name="your-name">
+            </div>
+            <div class="popup__item"> 
+              <label for="name"> </label>
+              <input class="popup__input input" type="text" name="name" id="name" placeholder="Name">
+            </div>
+            <div class="popup__item"> 
+              <label for="phone"> </label>
+              <input class="popup__input input" type="text" name="phone" id="phone" placeholder="Phone">
+            </div>
+            <div class="popup__item"> 
+              <label for="email"> </label>
+              <input class="popup__input input" type="text" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="popup__item"> 
+              <textarea class="comment__textarea textarea" name="comment" rows="10" placeholder="Message..."></textarea>
+            </div>
+            <div class="popup__item popup__item--button"> 
+              <input class="popup__button button button--bg" type="submit" value="Send">
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     <script src="./js/scripts.js"> </script>

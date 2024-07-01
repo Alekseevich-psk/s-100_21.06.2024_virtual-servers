@@ -1,0 +1,25 @@
+.popup#popup.active
+    .popup__overflow 
+        .popup__body 
+            form(action="#" method="post").popup__form
+                .popup__header
+                    .popup__title Get in touch
+                    button(type="button").popup__close Close
+                .popup__item.popup__item-hide 
+                    //- name="title" сюда прилетает данные из data-popup-title
+                    input(type="text", name="title")
+                    //-  name="your-name" поле для фильтра от спама
+                    input(type="text", name="your-name")
+                .popup__item 
+                    label(for="name") 
+                    input(type="text" name="name" id="name" placeholder="Name").popup__input.input
+                .popup__item 
+                    label(for="phone") 
+                    input(type="text" name="phone" id="phone" placeholder="Phone").popup__input.input
+                .popup__item 
+                    label(for="email") 
+                    input(type="text" name="email" id="email" placeholder="Email").popup__input.input
+                .popup__item 
+                    textarea(name="comment", rows="10", placeholder="Message...").comment__textarea.textarea
+                .popup__item.popup__item--button 
+                    input(type="submit" value="Send").popup__button.button.button--bg

@@ -15,6 +15,7 @@
 @import "./mixin/position";
 @import "./mixin/pseudo";
 @import "./mixin/res-ratio";
+@import "./mixin/scrollbar";
 
 @import "./fonts";
 @import "./setting/variables";
@@ -40,6 +41,7 @@
 @import "@Components/header/header";
 @import "@Components/footer/footer";
 @import "@Components/btn-top/btn-top";
+@import "@Components/popup/popup";
 // @import "@Components/preloader/preloader";
 
 @import "@Sections/main/main";
