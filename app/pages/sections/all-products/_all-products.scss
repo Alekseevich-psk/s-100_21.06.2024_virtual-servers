@@ -122,6 +122,10 @@
                 }
             }
 
+            .all-products__desc {
+                text-align: left;
+            }
+
             .all-products__align {
                 @include for-mobile {
                     width: 100%;

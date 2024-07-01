@@ -3237,6 +3237,10 @@ a {
   text-align: right;
 }
 
+.all-products__inner--reverse .all-products__desc {
+  text-align: left;
+}
+
 .all-products__inner:last-child {
   margin-bottom: 0;
 }
