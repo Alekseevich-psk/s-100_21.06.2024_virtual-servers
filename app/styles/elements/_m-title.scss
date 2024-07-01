@@ -1,0 +1,22 @@
+.m-title {
+    font-family: $fontSecond, sans-serif;
+    font-weight: 900;
+    font-size: 75px;
+    line-height: 100%;
+    color: $black;
+
+    @include for-sm-desktop {
+        font-size: 62px;
+    }
+
+    @include for-tablet {
+        width: 100%;
+        font-size: 54px;
+        margin-bottom: 32px;
+    }
+
+    @include for-mobile {
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+}

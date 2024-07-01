@@ -37,7 +37,8 @@
     }
 
     &:hover {
-        background-color: $black;
+        background-color: $active;
+        border: 1px solid $active;
         color: $white;
     }
 
@@ -49,8 +50,9 @@
         line-height: 100%;
 
         &:hover {
-            background-color: $white;
-            color: $black;
+            border: 1px solid $active;
+            background-color: $active;
+            color: $white;
         }
     }
 
