@@ -10,3 +10,4 @@ import '@Components/popup/popup.ts';
 
 import '@Sections/main/main.ts';
 import '@Sections/faq/faq.ts';
+import '@Sections/vps-plans/vps-plans.ts';

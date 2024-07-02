@@ -1,0 +1,153 @@
+.vps-plans {
+    position: relative;
+    overflow: hidden;
+
+    &__container {
+        position: relative;
+    }
+
+    &__bg-ico {
+        z-index: 1;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        &:nth-child(1) {
+            top: 10%;
+            left: -3%;
+            width: 20%;
+            height: 30%;
+            background-image: url('../images/ico-plumb-14.png');
+
+            @include for-mobile {
+                width: 100%;
+                height: 140px;
+                top: 3%;
+            }
+        }
+
+        &:nth-child(2) {
+            top: 25%;
+            right: -3%;
+            width: 60%;
+            height: 70%;
+            background-image: url('../images/ico-plumb-15.png');
+
+            @include for-mobile {
+                top: auto;
+                bottom: 0;
+                width: 100%;
+                height: 50%;
+                max-height: 300px;
+                right: 0;
+            }
+        }
+    }
+
+    &__s-title {
+        margin-bottom: 32px;
+    }
+
+    &__desc {
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 140%;
+        max-width: 700px;
+        margin-bottom: 40px;
+
+        @include for-tablet {
+            font-size: 24px;
+        }
+
+        @include for-mobile {
+            font-size: 18px;
+        }
+    }
+
+    &__tabs {
+        position: relative;
+        z-index: 2;
+        font-size: 0;
+        display: block;
+        width: 400px;
+        margin: 0 auto;
+        padding: 10px 12px;
+        background-color: $bgGrayWhite;
+        box-shadow: $bsh;
+        border-radius: var(--brCard);
+        margin-bottom: 48px;
+
+        @include for-mobile {
+            width: 100%;
+            padding: 6px 8px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__tab {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 140%;
+        width: 50%;
+        transition: $transition;
+        text-align: center;
+        background-color: transparent;
+        border-radius: 10px;
+        padding: 10px;
+
+        @include for-tablet {
+            font-size: 24px;
+        }
+
+        @include for-mobile {
+            font-size: 20px;
+        }
+
+        &.active {
+            background-color: $active;
+            color: $white;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+        @include flex-wrap();
+    }
+
+    &__card-pr {
+        width: calc(calc(100% - 90px) / 4);
+        margin-bottom: 30px;
+
+        @include for-sm-desktop {
+            width: calc(calc(100% - 40px) / 3);
+            margin-bottom: 24px;
+        }
+
+        @include for-tablet {
+            width: 48.5%;
+            margin-bottom: 20px;
+        }
+
+        @include for-mobile {
+            width: 100%;
+        }
+    }
+
+    .next-section {
+        @include for-mobile {
+            display: none;
+        }
+    }
+
+}

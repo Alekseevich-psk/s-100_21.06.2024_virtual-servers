@@ -1,0 +1,37 @@
+include data.pug
+
+section.vps-plans#vps-plans
+    .vps-plans__container.container 
+        .vps-plans__icons 
+            .vps-plans__bg-ico
+            .vps-plans__bg-ico
+        h2.vps-plans__s-title.s-title VPS Plans
+        .vps-plans__desc Virtual machines with a specific set of computing resources (cores, memory, disks, video cards).
+        .vps-plans__tabs 
+            button(type="button").vps-plans__tab.vps-plans__tab--month Monthly
+            button(type="button").vps-plans__tab.vps-plans__tab--year.active Yearly
+        .vps-plans__wrapper
+            each slide in vpsPlansSlides
+                .vps-plans__card-pr.card-pr.card-pr--tabs.year
+                    .card-pr__title=slide.title
+                    .card-pr__old-price.card-pr__old-price--month 
+                        .card-pr__old-price-value=slide.oldPriceMonth
+                        .card-pr__old-price-info=slide.infoMonth
+                    .card-pr__old-price.card-pr__old-price--year 
+                        .card-pr__old-price-value=slide.oldPriceYear
+                        .card-pr__old-price-info=slide.infoYear
+                    .card-pr__price.card-pr__price--month 
+                        p $ 
+                        span=slide.priceMonth 
+                        p /mo
+                    .card-pr__price.card-pr__price--year 
+                        p $ 
+                        span=slide.priceYear 
+                        p /mo
+                    ul.card-pr__list 
+                        each val in slide.list 
+                            li.card-pr__item=val
+                    button(type="button").card-pr__button.button Choose Plan
+        .vps-plans__next-section.next-section
+            button(type="button").next-section__button.button--arrow
+        .vps-plans__hr.hr

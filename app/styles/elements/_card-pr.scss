@@ -6,6 +6,35 @@
     box-shadow: 5px 5px 15px 0 rgba(168, 168, 168, 0.25);
     background: $bgGrayWhite;
 
+    &--tabs {
+
+        .card-pr__old-price,
+        .card-pr__price {
+            display: none;
+        }
+
+
+        &.month {
+            .card-pr__old-price--month {
+                display: flex;
+            }
+
+            .card-pr__price--month {
+                display: block;
+            }
+        }
+
+        &.year {
+            .card-pr__old-price--year {
+                display: flex;
+            }
+
+            .card-pr__price--year {
+                display: block;
+            }
+        }
+    }
+
     @include for-mobile {
         padding: 32px 12px;
         padding-bottom: 120px;

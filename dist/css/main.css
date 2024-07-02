@@ -1691,6 +1691,27 @@ a {
   background: #f5f6f7f1;
 }
 
+.card-pr--tabs .card-pr__old-price,
+.card-pr--tabs .card-pr__price {
+  display: none;
+}
+
+.card-pr--tabs.month .card-pr__old-price--month {
+  display: flex;
+}
+
+.card-pr--tabs.month .card-pr__price--month {
+  display: block;
+}
+
+.card-pr--tabs.year .card-pr__old-price--year {
+  display: flex;
+}
+
+.card-pr--tabs.year .card-pr__price--year {
+  display: block;
+}
+
 .card-pr__title {
   font-family: "Orbitron", Arial, Helvetica, sans-serif;
   font-size: 30px;
@@ -3521,6 +3542,104 @@ a {
   margin-right: 20px;
 }
 
+.vps-plans {
+  position: relative;
+  overflow: hidden;
+}
+
+.vps-plans__container {
+  position: relative;
+}
+
+.vps-plans__bg-ico {
+  z-index: 1;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.vps-plans__bg-ico:nth-child(1) {
+  top: 10%;
+  left: -3%;
+  width: 20%;
+  height: 30%;
+  background-image: url("../images/ico-plumb-14.png");
+}
+
+.vps-plans__bg-ico:nth-child(2) {
+  top: 25%;
+  right: -3%;
+  width: 60%;
+  height: 70%;
+  background-image: url("../images/ico-plumb-15.png");
+}
+
+.vps-plans__s-title {
+  margin-bottom: 32px;
+}
+
+.vps-plans__desc {
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 140%;
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.vps-plans__tabs {
+  position: relative;
+  z-index: 2;
+  font-size: 0;
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px 12px;
+  background-color: #f5f6f7f1;
+  box-shadow: 5px 5px 18px 0 rgba(168, 168, 168, 0.45);
+  border-radius: var(--brCard);
+  margin-bottom: 48px;
+}
+
+.vps-plans__tab {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 140%;
+  width: 50%;
+  transition: 0.25s;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.vps-plans__tab.active {
+  background-color: #49a6ff;
+  color: #fff;
+}
+
+.vps-plans__tab.active:hover {
+  text-decoration: none;
+}
+
+.vps-plans__tab:hover {
+  text-decoration: underline;
+}
+
+.vps-plans__wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.vps-plans__card-pr {
+  width: calc(calc(100% - 90px) / 4);
+  margin-bottom: 30px;
+}
+
 @media (min-width: 768px) {
   .header.scroll .header__inner--nav {
     opacity: 0;
@@ -3588,6 +3707,11 @@ a {
 
   .s-banner__desc {
     font-size: 20px;
+  }
+
+  .vps-plans__card-pr {
+    width: calc(calc(100% - 40px) / 3);
+    margin-bottom: 24px;
   }
 }
 
@@ -4002,6 +4126,19 @@ a {
 
   .s-banner .button--bg {
     margin-right: 0;
+  }
+
+  .vps-plans__desc {
+    font-size: 24px;
+  }
+
+  .vps-plans__tab {
+    font-size: 24px;
+  }
+
+  .vps-plans__card-pr {
+    width: 48.5%;
+    margin-bottom: 20px;
   }
 }
 
@@ -4639,6 +4776,43 @@ a {
   .s-banner__desc {
     font-size: 16px;
     margin-bottom: 32px;
+  }
+
+  .vps-plans__bg-ico:nth-child(1) {
+    width: 100%;
+    height: 140px;
+    top: 3%;
+  }
+
+  .vps-plans__bg-ico:nth-child(2) {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    max-height: 300px;
+    right: 0;
+  }
+
+  .vps-plans__desc {
+    font-size: 18px;
+  }
+
+  .vps-plans__tabs {
+    width: 100%;
+    padding: 6px 8px;
+    margin-bottom: 24px;
+  }
+
+  .vps-plans__tab {
+    font-size: 20px;
+  }
+
+  .vps-plans__card-pr {
+    width: 100%;
+  }
+
+  .vps-plans .next-section {
+    display: none;
   }
 }
 
