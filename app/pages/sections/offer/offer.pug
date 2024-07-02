@@ -1,0 +1,15 @@
+include data.pug
+
+section.offer#offer
+    .offer__container.container
+        .offer__icons 
+            .offer__bg-ico 
+        h2.offer__s-title.s-title What We Offer
+        .offer__wrapper 
+            each card in cardsOffers
+                .offer__inner 
+                    .offer__title=card.title
+                    .offer__desc=card.desc
+        .offer__next-section.next-section
+            button(type="button").next-section__button.button--arrow
+        .offer__hr.hr
