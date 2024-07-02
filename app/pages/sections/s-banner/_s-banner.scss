@@ -7,11 +7,10 @@
     }
 
     &__inner {
-        width: 50%;
+        width: 55%;
 
-        &:first-child {
-            width: 55%;
-            margin-right: -5%;
+        &:last-child {
+            width: 45%;
         }
 
         @include for-tablet {

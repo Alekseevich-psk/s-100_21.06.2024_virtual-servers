@@ -3498,12 +3498,11 @@ a {
 }
 
 .s-banner__inner {
-  width: 50%;
+  width: 55%;
 }
 
-.s-banner__inner:first-child {
-  width: 55%;
-  margin-right: -5%;
+.s-banner__inner:last-child {
+  width: 45%;
 }
 
 .s-banner__m-title {
