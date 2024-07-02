@@ -4210,7 +4210,7 @@ a {
   }
 
   .s-banner__inner {
-    width: 100%;
+    width: 100% !important;
   }
 
   .s-banner__inner:last-child {

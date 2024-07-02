@@ -15,7 +15,7 @@
         }
 
         @include for-tablet {
-            width: 100%;
+            width: 100% !important;
 
             &:last-child {
                 order: -1;
