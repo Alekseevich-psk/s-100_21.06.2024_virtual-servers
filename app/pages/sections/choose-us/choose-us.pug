@@ -1,0 +1,18 @@
+include data.pug
+
+section.choose-us#choose-us
+    .choose-us__container.container 
+        .choose-us__s-title.s-title Why Choose Us
+        .choose-us__wrapper 
+            .choose-us__inner.choose-us__inner--main
+                .choose-us__title The quality is 100% in everything
+            each slide in chooseUsSlides
+                .choose-us__inner.choose-us__inner--item
+                    .choose-us__picture 
+                        img(src=slide.img alt="")
+                    a(href="#" title="title").choose-us__wrap-text  
+                        .choose-us__sub-title=slide.title
+                        .choose-us__desc=slide.desc
+        .vps-plans__next-section.next-section
+            button(type="button").next-section__button.button--arrow
+        .vps-plans__hr.hr
