@@ -3520,6 +3520,10 @@ a {
   justify-content: flex-start;
 }
 
+.all-products__inner--main .m-title {
+  width: 50%;
+}
+
 .all-products__inner--reverse .all-products__text {
   display: flex;
   align-items: flex-end;
@@ -4778,6 +4782,11 @@ a {
   .all-products__wrapper .hr {
     margin-top: 0;
     margin-bottom: 40px;
+  }
+
+  .all-products__inner--main .m-title {
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .all-products__inner {

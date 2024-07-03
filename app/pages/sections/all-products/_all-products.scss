@@ -101,6 +101,15 @@
             align-items: flex-end;
             justify-content: flex-start;
 
+            .m-title {
+                width: 50%;
+
+                @include for-tablet {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+
             @include for-mobile {
                 margin-bottom: 40px;
             }
