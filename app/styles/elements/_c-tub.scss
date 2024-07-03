@@ -1,0 +1,32 @@
+.c-tub {
+    cursor: pointer;
+    display: inline-block;
+    width: 126px;
+    color: $black;
+    text-align: center;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 140%;
+    margin-right: 8px;
+
+    @include for-tablet {
+        font-size: 12px;
+        width: auto;
+        padding: 6px 18px;
+        margin-bottom: 8px;
+    }
+
+    &--reviews {
+        background: #49a6ff;
+    }
+
+    &--business-cases {
+        background: #9bef00;
+    }
+
+    &--instructions {
+        background: #ef009b;
+    }
+}

@@ -77,39 +77,6 @@
         padding-top: 6px;
     }
 
-    &__tab {
-        cursor: pointer;
-        display: inline-block;
-        vertical-align: top;
-        width: 126px;
-        text-align: center;
-        font-weight: 500;
-        padding: 8px;
-        border-radius: 10px;
-        font-size: 14px;
-        line-height: 140%;
-        margin-right: 8px;
-
-        @include for-tablet {
-            font-size: 12px;
-            width: auto;
-            padding: 6px 18px;
-            margin-bottom: 8px;
-        }
-
-        &--reviews {
-            background: #49a6ff;
-        }
-
-        &--business-cases {
-            background: #9bef00;
-        }
-
-        &--instructions {
-            background: #ef009b;
-        }
-    }
-
     &__wrapper {
         position: relative;
         z-index: 2;
@@ -122,10 +89,6 @@
     }
 
     &__card-np {
-
-        // &:nth-child(n + 7):nth-child(-n + 12) {
-        //     display: none !important;
-        // }
 
         @media(min-width: 1281px) {
             width: calc(calc(60% - 60px) / 3);
