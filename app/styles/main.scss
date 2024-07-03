@@ -31,6 +31,7 @@
 @import "./elements/card-sl";
 @import "./elements/card-nw";
 @import "./elements/card-rw";
+@import "./elements/card-np";
 @import "./elements/next-section";
 @import "./elements/btn-link";
 @import "./elements/c-rating";
@@ -45,6 +46,7 @@
 @import "@Components/popup/popup";
 @import "@Components/preloader/preloader";
 @import "@Components/breadcrumbs/breadcrumbs";
+@import "@Components/pagination/pagination";
 
 @import "@Sections/main/main";
 @import "@Sections/our-products/our-products";
@@ -60,3 +62,4 @@
 @import "@Sections/vps-plans/vps-plans";
 @import "@Sections/choose-us/choose-us";
 @import "@Sections/offer/offer";
+@import "@Sections/news/news";

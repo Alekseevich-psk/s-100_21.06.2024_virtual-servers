@@ -1,0 +1,84 @@
+.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 64px;
+    padding-bottom: 40px;
+
+    @include for-mobile {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    &__item {
+
+        &--first,
+        &--last {
+            display: block;
+            margin: 0 1%;
+            width: 38px;
+            height: 22px;
+            transition: $transition;
+            background-color: $black;
+            mask-repeat: no-repeat;
+            mask-size: 100%;
+            mask-position: center;
+
+            &:hover {
+                background-color: $active;
+            }
+
+            @include for-mobile {
+                width: 28px;
+                height: 22px;
+            }
+        }
+
+        &--first {
+            mask-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='38' height='23' viewBox='0 0 38 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.98528 21.6544L0.439339 12.1085C-0.146446 11.5227 -0.146446 10.5729 0.439339 9.98715L9.98528 0.441206C10.5711 -0.144581 11.5208 -0.144581 12.1066 0.441206C12.6924 1.02699 12.6924 1.97674 12.1066 2.56253L5.12132 9.54781L37.5 9.54781V12.5478L5.12132 12.5478L12.1066 19.5331C12.6924 20.1189 12.6924 21.0686 12.1066 21.6544C11.5208 22.2402 10.5711 22.2402 9.98528 21.6544Z' fill='%23525254' /%3e%3c/svg%3e");
+        }
+
+        &--last {
+            mask-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='38' height='23' viewBox='0 0 38 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M27.5147 0.43934L37.0607 9.98528C37.6464 10.5711 37.6464 11.5208 37.0607 12.1066L27.5147 21.6525C26.9289 22.2383 25.9792 22.2383 25.3934 21.6525C24.8076 21.0668 24.8076 20.117 25.3934 19.5312L32.3787 12.5459H0L0 9.54594H32.3787L25.3934 2.56066C24.8076 1.97487 24.8076 1.02513 25.3934 0.43934C25.9792 -0.146447 26.9289 -0.146447 27.5147 0.43934Z' fill='%23525254' /%3e%3c/svg%3e");
+        }
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    li a {
+        display: inline-block;
+        padding: 8px 16px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 18px;
+        color: #525254;
+        margin: 0 2px;
+        transition: $transition;
+
+        @include for-mobile {
+            font-size: 14px;
+            padding: 8px 12px;
+        }
+
+        &:hover {
+            color: $active;
+            text-decoration: underline;
+        }
+    }
+
+    .disabled {
+        display: none;
+    }
+
+    .active {
+
+        .pagination__link,
+        a {
+            color: $active;
+        }
+    }
+}

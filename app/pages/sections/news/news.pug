@@ -1,5 +1,32 @@
-sections.news#news
-    .news__container.container 
+include data.pug
+
+section.news#news
+    .news__container.container
+        .news__breadcrumbs.breadcrumbs 
+            include ../../components/breadcrumbs/breadcrumbs.pug 
+        .news__icons 
+            .news__bg-ico
+            .news__bg-ico
         .news__header 
-            h1.news__s-title.s-title 
+            h1.news__s-title.s-title Latest News
             .news__tabs 
+                button(type="button").news__tab.news__tab--reviews Reviews
+                button(type="button").news__tab.news__tab--business-cases Business cases
+                button(type="button").news__tab.news__tab--instructions Instructions
+        .news__wrapper 
+            each card in newsSlides
+                a(href="#", title="title").news__card-np.card-np
+                    .card-np__picture 
+                        img(src=card.img alt=card.title)
+                    .card-np__wrap-text 
+                        .card-np__title=card.title
+                        .card-np__content=card.content
+                    .card-np__footer
+                        .card-np__author 
+                            .card-np__photo 
+                                img(src=card.photo alt="")
+                            .card-np__name=card.name
+                        .card-np__date=card.date 
+        .news__pagination.pagination 
+            include ../../components/pagination/pagination.pug
+            
