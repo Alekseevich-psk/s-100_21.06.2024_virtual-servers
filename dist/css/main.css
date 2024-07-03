@@ -4095,6 +4095,7 @@ a {
 .article__header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 44px;
 }
 
