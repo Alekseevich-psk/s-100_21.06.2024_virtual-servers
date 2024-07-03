@@ -4888,6 +4888,10 @@ a {
     padding-bottom: 100%;
   }
 
+  .article {
+    padding-top: 30px;
+  }
+
   .article__header {
     margin-bottom: 28px;
   }
