@@ -1,0 +1,23 @@
+.related-news {
+
+    &__s-title {
+        margin-bottom: 36px;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 120%;
+    }
+
+    &__wrapper {
+        @include flex-wrap();
+        align-items: flex-start;
+    }
+
+    &__card-np {
+        width: 49%;
+
+        @include for-tablet {
+            width: 100%;
+            margin-bottom: 32px;
+        }
+    }
+}

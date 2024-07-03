@@ -1,0 +1,19 @@
+include data.pug
+
+section.related-news#related-news
+    .related-news__container.container 
+        h2.related-news__s-title.s-title Related news
+        .related-news__wrapper 
+            each card in newsSlides
+                a(href="#", title="title").related-news__card-np.card-np--gor
+                    .card-np__picture 
+                        img(src=card.img alt=card.title)
+                    .card-np__wrap-text 
+                        .card-np__title=card.title
+                        .card-np__content=card.content
+                        .card-np__footer
+                            .card-np__author 
+                                .card-np__photo 
+                                    img(src=card.photo alt="")
+                                .card-np__name=card.name
+                            .card-np__date=card.date 

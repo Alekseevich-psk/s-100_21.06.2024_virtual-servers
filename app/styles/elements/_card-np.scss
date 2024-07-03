@@ -3,6 +3,52 @@
     padding-bottom: 94px;
     border-bottom: 1px solid $black;
 
+    &--gor {
+        display: flex;
+
+        @include for-mobile {
+            flex-direction: column;
+        }
+
+        .card-np__picture {
+            min-width: 250px;
+            max-width: 250px;
+            height: 250px;
+            margin-right: 20px;
+            margin-bottom: 0;
+            padding: 0;
+
+            @include for-sm-desktop {
+                min-width: 200px;
+                max-width: 200px;
+                height: 200px;
+            }
+
+            @include for-mobile {
+                min-width: 100%;
+                max-width: 100%;
+                height: 220px;
+                margin-right: 14px;
+                margin-bottom: 26px;
+            }
+        }
+
+        .card-np__wrap-text {
+            position: relative;
+            padding-bottom: 80px;
+        }
+
+        .card-np__footer {
+            border-bottom: 1px solid #3f3f3f79;
+        }
+
+        &:hover {
+            .card-np__title {
+                text-decoration: underline;
+            }
+        }
+    }
+
     &:hover {
         .card-np__title {
             text-decoration: underline;
@@ -76,8 +122,6 @@
         max-width: 54px;
         height: 54px;
         margin-right: 12px;
-
-
 
         @include for-tablet {
             min-width: 40px;
