@@ -13,6 +13,18 @@
         background-position: center;
         background-size: contain;
 
+        @include second-theme('vps-plans') {
+            &__bg-ico {
+                &:nth-child(1) {
+                    background-image: url('../images/ico-plumb-14-th-2.png');
+                }
+
+                &:nth-child(2) {
+                    background-image: url('../images/ico-plumb-15-th-2.png');
+                }
+            }
+        }
+
         &:nth-child(1) {
             top: 10%;
             left: -3%;

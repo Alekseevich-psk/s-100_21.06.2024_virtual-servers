@@ -18,6 +18,12 @@
         position: relative;
     }
 
+    @include second-theme('all-products') {
+        &__icons {
+            display: none;
+        }
+    }
+
     &__ico-bg {
         position: absolute;
         background-repeat: no-repeat;

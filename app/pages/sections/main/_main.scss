@@ -25,7 +25,13 @@
         transform: translateY(-50%);
         background: url('../images/svg/bg-main.svg') no-repeat center / contain;
         opacity: 0;
-    
+
+        @include second-theme('main') {
+            &__bg {
+                background: url('../images/svg/bg-main-th-2.svg') no-repeat center / contain;
+            }
+        }
+
         @include for-sm-desktop {
             transform: none;
             top: auto;

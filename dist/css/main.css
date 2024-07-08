@@ -1242,6 +1242,16 @@ button.swiper-pagination-bullet {
   font-style: Normal;
 }
 
+body {
+  --fontMain: 'Inter';
+  --fontSecond: 'Orbitron';
+}
+
+body.second-theme {
+  --fontMain: 'Inter';
+  --fontSecond: 'Inter';
+}
+
 :root {
   --br: 6px;
   --pr: 14px;
@@ -1255,7 +1265,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: var(--fontMain), Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -1288,6 +1298,11 @@ body::-webkit-scrollbar-thumb {
   border-radius: 4px !important;
 }
 
+html.second-theme,
+body.second-theme {
+  background-color: #F1F8FF;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1305,14 +1320,14 @@ sup {
 button,
 textarea,
 input {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: var(--fontMain), Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
 }
 
 a {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: var(--fontMain), Arial, Helvetica, sans-serif;
   line-height: 120%;
 }
 
@@ -1331,7 +1346,7 @@ a {
   display: inline-block;
   background-color: transparent;
   padding: 16px 26px;
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--fontSecond), sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 100%;
@@ -1344,7 +1359,7 @@ a {
 
 .button.in-fonts {
   font-size: 22px;
-  font-family: "Inter", sans-serif;
+  font-family: var(--fontMain), sans-serif;
 }
 
 .button:hover {
@@ -1653,7 +1668,7 @@ a {
 }
 
 .s-title {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--fontSecond), sans-serif;
   font-weight: 900;
   font-size: 56px;
   line-height: 120%;
@@ -1662,7 +1677,7 @@ a {
 }
 
 .m-title {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--fontSecond), sans-serif;
   font-weight: 900;
   font-size: 75px;
   line-height: 100%;
@@ -1715,7 +1730,7 @@ a {
 }
 
 .card-pr__title {
-  font-family: "Orbitron", Arial, Helvetica, sans-serif;
+  font-family: var(--fontSecond), Arial, Helvetica, sans-serif;
   font-size: 30px;
   font-weight: 900;
   line-height: 120%;
@@ -1815,7 +1830,7 @@ a {
 }
 
 .card-sl__title {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--fontSecond), sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 120%;
@@ -1889,6 +1904,18 @@ a {
   border-radius: 10px;
   font-size: 14px;
   line-height: 140%;
+}
+
+body.second-theme .card-nw__info--reviews {
+  background: #49A6FF;
+}
+
+body.second-theme .card-nw__info--business-cases {
+  background: #19F771;
+}
+
+body.second-theme .card-nw__info--instructions {
+  background: #F7C619;
 }
 
 .card-nw__info--reviews {
@@ -2200,7 +2227,7 @@ a {
 }
 
 .menu .button {
-  font-family: "Inter";
+  font-family: var(--fontMain);
   font-weight: 400;
   font-size: 15px;
   padding: 12px 34px;
@@ -2237,6 +2264,18 @@ a {
   font-size: 14px;
   line-height: 140%;
   margin-right: 8px;
+}
+
+body.second-theme .c-tub--reviews {
+  background: #49a6ff;
+}
+
+body.second-theme .c-tub--business-cases {
+  background: #19f771;
+}
+
+body.second-theme .c-tub--instructions {
+  background: #f7c619;
 }
 
 .c-tub--reviews {
@@ -2357,6 +2396,10 @@ a {
   margin-top: 82px;
   background: url("../images/svg/bg-footer.svg") no-repeat center bottom/contain;
   padding-bottom: 22%;
+}
+
+body.second-theme .footer__bg {
+  background: url("../images/svg/bg-footer-th-2.svg") no-repeat center bottom/contain;
 }
 
 .footer__wrapper {
@@ -2711,6 +2754,10 @@ a {
   opacity: 0;
 }
 
+body.second-theme .main__bg {
+  background: url("../images/svg/bg-main-th-2.svg") no-repeat center/contain;
+}
+
 .main__container {
   position: relative;
   padding: var(--pdContainer) !important;
@@ -2723,7 +2770,7 @@ a {
 }
 
 .main__title {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--fontSecond), sans-serif;
   font-weight: 900;
   font-size: 70px;
   line-height: 100%;
@@ -2932,7 +2979,7 @@ a {
 }
 
 .configure__title {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--fontSecond), sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 110%;
@@ -2945,7 +2992,7 @@ a {
 }
 
 .configure__item-title {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--fontSecond), sans-serif;
   font-weight: 900;
   font-size: 22px;
   line-height: 110%;
@@ -3034,6 +3081,10 @@ a {
   background: url("../images/bg-subscribe.jpg") no-repeat center/cover;
 }
 
+body.second-theme .subscribe__container {
+  background: url("../images/bg-subscribe-th-2.jpg") no-repeat center/cover;
+}
+
 .subscribe__wrapper {
   padding: 64px 52px 100px;
   display: flex;
@@ -3055,6 +3106,18 @@ a {
   padding-bottom: 11.5%;
 }
 
+body.second-theme .subscribe__img {
+  padding-bottom: 14%;
+}
+
+body.second-theme .subscribe__img img {
+  display: none;
+}
+
+body.second-theme .subscribe__img img.second-theme {
+  display: block;
+}
+
 .subscribe__img img {
   position: absolute;
   top: 0;
@@ -3065,6 +3128,10 @@ a {
   object-fit: contain;
   -o-object-position: center;
   object-position: center;
+}
+
+.subscribe__img img.second-theme {
+  display: none;
 }
 
 .subscribe__button {
@@ -3082,6 +3149,14 @@ a {
 
 .about-us__container {
   position: relative;
+}
+
+body.second-theme .about-us__container::before {
+  background: url("../images/ico-plumb-2-th-2.png") no-repeat center/contain;
+}
+
+body.second-theme .about-us__container::after {
+  background: url("../images/ico-plumb-3-th-2.png") no-repeat center/contain;
 }
 
 .about-us__container::before {
@@ -3152,7 +3227,7 @@ a {
 
 .about-us__inner--title {
   width: 100%;
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--fontSecond), sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 110%;
@@ -3209,11 +3284,19 @@ a {
   z-index: 1;
 }
 
+body.second-theme .solutions__container::before {
+  background: url("../images/ico-plumb-4-th-2.png") no-repeat center/contain;
+}
+
+body.second-theme .solutions__container::after {
+  background: url("../images/ico-plumb-5-th-2.png") no-repeat center/contain;
+}
+
 .solutions__container::before {
   position: absolute;
   content: "";
   top: 50px;
-  left: -60px;
+  left: 0;
   display: block;
   width: 180px;
   height: 180px;
@@ -3242,6 +3325,30 @@ a {
 .solutions__card-sl {
   width: calc(calc(100% - 100px) / 3);
   margin-bottom: 50px;
+}
+
+body.second-theme .solutions__card-sl:nth-child(1) .card-sl__footer {
+  background: #49a6ff;
+}
+
+body.second-theme .solutions__card-sl:nth-child(2) .card-sl__footer {
+  background: #49a6ff;
+}
+
+body.second-theme .solutions__card-sl:nth-child(3) .card-sl__footer {
+  background: #00efcc;
+}
+
+body.second-theme .solutions__card-sl:nth-child(4) .card-sl__footer {
+  background: #00efcc;
+}
+
+body.second-theme .solutions__card-sl:nth-child(5) .card-sl__footer {
+  background: #49a6ff;
+}
+
+body.second-theme .solutions__card-sl:nth-child(6) .card-sl__footer {
+  background: linear-gradient(311deg, rgba(0, 239, 204, 0.6) 0%, rgba(73, 166, 255, 0.6) 36.09%, rgba(13, 240, 254, 0.6) 61.5%, rgba(0, 239, 204, 0.6) 100%);
 }
 
 .solutions__card-sl:nth-child(1) .card-sl__footer {
@@ -3279,6 +3386,14 @@ a {
 .news-reviews__container {
   position: relative;
   z-index: 1;
+}
+
+body.second-theme .news-reviews__container::before {
+  background: url("../images/ico-plumb-5-th-2.png") no-repeat center/contain;
+}
+
+body.second-theme .news-reviews__container::after {
+  background: url("../images/ico-plumb-6-th-2.png") no-repeat center/contain;
 }
 
 .news-reviews__container::before {
@@ -3361,6 +3476,10 @@ a {
   overflow: hidden;
 }
 
+body.second-theme .feedback__container::before {
+  background: url("../images/ico-plumb-8-th-2.png") no-repeat center/contain;
+}
+
 .feedback__container::before {
   position: absolute;
   content: "";
@@ -3385,7 +3504,7 @@ a {
 }
 
 .feedback__title {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--fontSecond), sans-serif;
   font-weight: 600;
   font-size: 30px;
   margin-bottom: 26px;
@@ -3457,6 +3576,10 @@ a {
 
 .all-products__container {
   position: relative;
+}
+
+body.second-theme .all-products__icons {
+  display: none;
 }
 
 .all-products__ico-bg {
@@ -3610,6 +3733,10 @@ a {
   background-image: url("../images/ico-plumb-13.png");
 }
 
+body.second-theme .faq__ico-bg {
+  background-image: url("../images/ico-plumb-13-th-2.png");
+}
+
 .faq__wrapper {
   align-items: center;
   display: flex;
@@ -3638,6 +3765,14 @@ a {
   margin: 0 auto;
   max-width: 240px;
   max-height: 420px;
+}
+
+body.second-theme .faq__picture img {
+  display: none;
+}
+
+body.second-theme .faq__picture img.second-theme {
+  display: block;
 }
 
 .faq__picture img {
@@ -3816,6 +3951,14 @@ a {
   background-size: contain;
 }
 
+body.second-theme .vps-plans__bg-ico:nth-child(1) {
+  background-image: url("../images/ico-plumb-14-th-2.png");
+}
+
+body.second-theme .vps-plans__bg-ico:nth-child(2) {
+  background-image: url("../images/ico-plumb-15-th-2.png");
+}
+
 .vps-plans__bg-ico:nth-child(1) {
   top: 10%;
   left: -3%;
@@ -3947,7 +4090,7 @@ a {
   display: block;
   margin: 0 auto;
   padding: 34px;
-  font-family: "Orbitron", Arial, Helvetica, sans-serif;
+  font-family: var(--fontSecond), Arial, Helvetica, sans-serif;
   text-align: center;
   font-size: 78px;
   max-width: 1000px;
@@ -3955,6 +4098,11 @@ a {
   font-weight: 900;
   text-shadow: #005FBA 2px 2px 0px;
   color: #44A2FC;
+}
+
+body.second-theme .choose-us__title {
+  text-shadow: #21a894 2px 2px 0px;
+  color: #39E2CA;
 }
 
 .choose-us__picture {
@@ -4008,6 +4156,10 @@ a {
   background-repeat: no-repeat;
   background-position: top right;
   background-size: contain;
+}
+
+body.second-theme .offer__bg-ico:nth-child(1) {
+  background-image: url("../images/ico-plumb-16-th-2.png");
 }
 
 .offer__bg-ico:nth-child(1) {
@@ -4073,6 +4225,14 @@ a {
   background-size: contain;
 }
 
+body.second-theme .news__bg-ico:nth-child(1) {
+  background-image: url("../images/ico-plumb-4-th-2.png");
+}
+
+body.second-theme .news__bg-ico:nth-child(2) {
+  background-image: url("../images/ico-plumb-15-th-2.png");
+}
+
 .news__bg-ico:nth-child(1) {
   top: 18%;
   left: 44%;
@@ -4131,7 +4291,7 @@ a {
 }
 
 .article__title {
-  font-family: "Orbitron", sans-serif;
+  font-family: var(--fontSecond), sans-serif;
   font-weight: 600;
   font-size: 55px;
   line-height: 120%;

@@ -19,6 +19,12 @@
         background: url('../images/svg/bg-footer.svg') no-repeat center bottom / contain;
         padding-bottom: 22%;
 
+        @include second-theme('footer') {
+            &__bg {
+                background: url('../images/svg/bg-footer-th-2.svg') no-repeat center bottom / contain;
+            }
+        }
+
         @include for-tablet {
             margin-top: 40px;
         }

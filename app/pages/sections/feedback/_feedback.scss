@@ -2,6 +2,15 @@
     overflow: hidden;
 
     &__container {
+
+        @include second-theme('feedback') {
+            &__container {
+                &::before {
+                    background: url('../images/ico-plumb-8-th-2.png') no-repeat center / contain;
+                }
+            }
+        }
+
         &::before {
             position: absolute;
             content: "";

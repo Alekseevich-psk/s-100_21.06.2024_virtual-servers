@@ -1,5 +1,15 @@
-$fontMain: 'Inter';
-$fontSecond: 'Orbitron';
+body {
+    --fontMain: 'Inter';
+    --fontSecond: 'Orbitron';
+
+    &.second-theme {
+        --fontMain: 'Inter';
+        --fontSecond: 'Inter';
+    }
+}
+
+$fontMain: var(--fontMain);
+$fontSecond: var(--fontSecond);
 
 $active: #49a6ff;
 $activeHover: #6bb7ff;
@@ -7,7 +17,8 @@ $activeVisited: #0675dd;
 
 $white: #fff;
 $bgGrayWhite: #f5f6f7f1;
-$bsh: 5px 5px 18px 0 rgba(168, 168, 168, 0.45);;
+$bsh: 5px 5px 18px 0 rgba(168, 168, 168, 0.45);
+;
 $black: #000a14;
 
 $transition: 0.25s;

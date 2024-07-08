@@ -5,11 +5,23 @@
         position: relative;
         z-index: 1;
 
+        @include second-theme('solutions') {
+            &__container {
+                &::before {
+                    background: url('../images/ico-plumb-4-th-2.png') no-repeat center / contain;
+                }
+
+                &::after {
+                    background: url('../images/ico-plumb-5-th-2.png') no-repeat center / contain;
+                }
+            }
+        }
+
         &::before {
             position: absolute;
             content: "";
             top: 50px;
-            left: -60px;
+            left: 0;
             display: block;
             width: 180px;
             height: 180px;
@@ -30,7 +42,6 @@
         @include for-tablet {
             &::before {
                 background-position: top center;
-                
             }
 
             &::after {
@@ -57,6 +68,46 @@
         @include for-mobile {
             width: 100%;
             margin-bottom: 20px;
+        }
+
+        @include second-theme('solutions') {
+            &__card-sl {
+                &:nth-child(1) {
+                    .card-sl__footer {
+                        background: #49a6ff;
+                    }
+                }
+
+                &:nth-child(2) {
+                    .card-sl__footer {
+                        background: #49a6ff;
+                    }
+                }
+
+                &:nth-child(3) {
+                    .card-sl__footer {
+                        background: #00efcc;
+                    }
+                }
+
+                &:nth-child(4) {
+                    .card-sl__footer {
+                        background: #00efcc;
+                    }
+                }
+
+                &:nth-child(5) {
+                    .card-sl__footer {
+                        background: #49a6ff;
+                    }
+                }
+
+                &:nth-child(6) {
+                    .card-sl__footer {
+                        background: linear-gradient(311deg, rgba(0, 239, 204, 0.6) 0%, rgba(73, 166, 255, 0.6) 36.09%, rgba(13, 240, 254, 0.6) 61.5%, rgba(0, 239, 204, 0.6) 100%);
+                    }
+                }
+            }
         }
 
         &:nth-child(1) {

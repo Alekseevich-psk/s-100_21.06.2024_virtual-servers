@@ -76,6 +76,13 @@
         text-shadow: #005FBA 2px 2px 0px;
         color: #44A2FC;
 
+        @include second-theme('choose-us') {
+            &__title {
+                text-shadow: #21a894 2px 2px 0px;
+                color: #39E2CA;
+            }
+        }
+
         @include for-tablet {
             font-size: 60px;
         }

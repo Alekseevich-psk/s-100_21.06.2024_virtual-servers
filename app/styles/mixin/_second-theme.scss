@@ -1,0 +1,9 @@
+@mixin second-theme($class) {
+    @at-root {
+        body.second-theme {
+            #{"." + $class} {
+                @content;
+            }
+        }
+    }
+}

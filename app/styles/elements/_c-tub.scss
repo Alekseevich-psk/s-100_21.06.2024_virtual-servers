@@ -18,6 +18,20 @@
         margin-bottom: 8px;
     }
 
+    @include second-theme('c-tub') {
+        &--reviews {
+            background: #49a6ff;
+        }
+
+        &--business-cases {
+            background: #19f771;
+        }
+
+        &--instructions {
+            background: #f7c619;
+        }
+    }
+
     &--reviews {
         background: #49a6ff;
     }

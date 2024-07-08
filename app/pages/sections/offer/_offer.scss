@@ -7,6 +7,14 @@
         background-position: top right;
         background-size: contain;
 
+        @include second-theme('offer') {
+            &__bg-ico {
+                &:nth-child(1) {
+                    background-image: url('../images/ico-plumb-16-th-2.png');
+                }
+            }
+        }
+
         &:nth-child(1) {
             top: -40px;
             right: 5%;

@@ -12,6 +12,18 @@
         background-position: center;
         background-size: contain;
 
+        @include second-theme('news') {
+            &__bg-ico {
+                &:nth-child(1) {
+                    background-image: url('../images/ico-plumb-4-th-2.png');
+                }
+
+                &:nth-child(2) {
+                    background-image: url('../images/ico-plumb-15-th-2.png');
+                }
+            }
+        }
+
         &:nth-child(1) {
             top: 18%;
             left: 44%;

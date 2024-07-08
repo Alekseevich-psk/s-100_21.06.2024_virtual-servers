@@ -9,6 +9,10 @@ body {
     line-height: 120%;
     background-color: #F1F8FF;
     @include scrollbar();
+
+    &.second-theme {
+        background-color: #F1F8FF;
+    }
 }
 
 * {

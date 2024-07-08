@@ -4,6 +4,18 @@
     &__container {
         position: relative;
 
+        @include second-theme('about-us') {
+            &__container {
+                &::before {
+                    background: url('../images/ico-plumb-2-th-2.png') no-repeat center / contain;
+                }
+
+                &::after {
+                    background: url('../images/ico-plumb-3-th-2.png') no-repeat center / contain;
+                }
+            }
+        }
+
         &::before {
             position: absolute;
             content: "";

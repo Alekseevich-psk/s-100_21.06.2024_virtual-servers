@@ -5,6 +5,18 @@
         position: relative;
         z-index: 1;
 
+        @include second-theme('news-reviews') {
+            &__container {
+                &::before {
+                    background: url('../images/ico-plumb-5-th-2.png') no-repeat center / contain;
+                }
+
+                &::after {
+                    background: url('../images/ico-plumb-6-th-2.png') no-repeat center / contain;
+                }
+            }
+        }
+
         &::before {
             position: absolute;
             content: "";

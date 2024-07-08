@@ -27,8 +27,7 @@
 
     &__content {
         p {
-            @include for-tablet {
-            }
+            @include for-tablet {}
         }
     }
 
@@ -60,6 +59,22 @@
             font-size: 12px;
             width: 116px;
             margin-left: 18px;
+        }
+
+        @include second-theme('card-nw') {
+            &__info {
+                &--reviews {
+                    background: #49A6FF;
+                }
+
+                &--business-cases {
+                    background: #19F771;
+                }
+
+                &--instructions {
+                    background: #F7C619;
+                }
+            }
         }
 
         &--reviews {

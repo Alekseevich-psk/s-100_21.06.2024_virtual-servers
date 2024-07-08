@@ -1,9 +1,15 @@
 .subscribe {
-    
+
     &__container {
         position: relative;
         padding: 0;
         background: url('../images/bg-subscribe.jpg') no-repeat center / cover;
+
+        @include second-theme('subscribe') {
+            &__container {
+                background: url('../images/bg-subscribe-th-2.jpg') no-repeat center / cover;
+            }
+        }
 
         @include for-mobile {
             padding-bottom: 40px;
@@ -61,6 +67,21 @@
         width: 100%;
         padding-bottom: 11.5%;
 
+        @include second-theme('subscribe') {
+
+            &__img {
+                padding-bottom: 14%;
+
+                img {
+                    display: none;
+
+                    &.second-theme {
+                        display: block;
+                    }
+                }
+            }
+        }
+
         img {
             position: absolute;
             top: 0;
@@ -69,6 +90,10 @@
             height: 100%;
             object-fit: contain;
             object-position: center;
+
+            &.second-theme {
+                display: none;
+            }
         }
     }
 
