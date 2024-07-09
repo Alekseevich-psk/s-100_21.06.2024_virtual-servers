@@ -3782,6 +3782,10 @@ body.second-theme .faq__picture img.second-theme {
   object-fit: contain;
 }
 
+.faq__picture img.second-theme {
+  display: none;
+}
+
 .faq__header {
   padding: 22px 0;
 }
