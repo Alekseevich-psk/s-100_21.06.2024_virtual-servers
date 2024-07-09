@@ -3,7 +3,7 @@
     padding: 0;
     overflow-x: hidden;
 
-    --pdContainer: 240px 20px 190px;
+    --pdContainer: 200px 20px 160px;
 
     @include for-sm-desktop {
         --pdContainer: 160px 20px 160px;

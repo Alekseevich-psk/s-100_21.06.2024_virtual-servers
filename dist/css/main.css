@@ -2777,7 +2777,7 @@ body.second-theme .footer__bg {
   position: relative;
   padding: 0;
   overflow-x: hidden;
-  --pdContainer: 240px 20px 190px;
+  --pdContainer: 200px 20px 160px;
 }
 
 .main__bg {
