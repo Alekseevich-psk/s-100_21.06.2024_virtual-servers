@@ -5,7 +5,8 @@ header.header#header
         .header__wrapper.header__wrapper
             .header__inner.header__inner--logo
                 a(href="/" title="title").header__logo  
-                    img(src="./images/svg/ico-logo.svg" alt="")
+                    img(src="./images/svg/ico-logo.svg" alt="" class="header__logo-picture")
+                    .header__logo-text virtualdc
                 button(type="button").header__btn-menu
             .header__inner.header__inner--contacts 
                 each item in headerContacts
