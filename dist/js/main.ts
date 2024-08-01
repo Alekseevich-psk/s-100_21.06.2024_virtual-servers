@@ -12,3 +12,4 @@ import '@Components/button-theme/button-theme.ts';
 import '@Sections/main/main.ts';
 import '@Sections/faq/faq.ts';
 import '@Sections/vps-plans/vps-plans.ts';
+import '@Sections/news-reviews/news-reviews.ts';

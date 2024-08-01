@@ -63,6 +63,7 @@
         position: relative;
         z-index: 2;
         @include flex-wrap();
+        align-items: flex-start;
     }
 
     &__inner {

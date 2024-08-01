@@ -31,7 +31,9 @@ section.news-reviews#news-reviews
                                     .c-rating__value(data-max-value=5)=card.rating 
                                     .c-rating__wrapper    
                                 .card-rw__title=card.title 
-                                .card-rw__content=card.content
+                                .card-rw__content.hide=card.content
+                                .card-rw__align 
+                                    button(type="button").card-rw__button read all
                 .news-reviews__align 
                     a(href="#", title="title").news-reviews__btn-link.btn-link Go to all reviews
         .news-reviews__next-section.next-section
