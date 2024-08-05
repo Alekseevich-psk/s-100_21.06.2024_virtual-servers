@@ -33,10 +33,12 @@
         popupInputTitle.value = "";
     };
 
-    buttonsOpen.forEach((button : HTMLElement) => {
+    buttonsOpen.forEach((button: HTMLElement) => {
         const popupTitle = button.getAttribute("data-popup-title");
 
-        button.addEventListener("click", () => {
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
+            
             if (popupTitle) {
                 popupInputTitle.value = popupTitle;
             }
