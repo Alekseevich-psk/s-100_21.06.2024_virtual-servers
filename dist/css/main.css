@@ -1244,12 +1244,12 @@ button.swiper-pagination-bullet {
 
 body {
   --fontMain: 'Inter';
-  --fontSecond: 'Orbitron';
+  --fontSecond: 'Inter';
 }
 
 body.second-theme {
   --fontMain: 'Inter';
-  --fontSecond: 'Inter';
+  --fontSecond: 'Orbitron';
 }
 
 :root {
