@@ -5107,7 +5107,7 @@ body.second-theme .news__bg-ico:nth-child(2) {
   }
 
   .vps-plans__card-pr {
-    margin-right: 0;
+    margin-right: 0 !important;
     width: 49%;
     margin-bottom: 20px;
   }
