@@ -2914,6 +2914,10 @@ body.second-theme .main__bg {
   position: relative;
 }
 
+body.second-theme .our-products__container::before {
+  background: url("../images/ico-circle-1-th-2.png") no-repeat center/contain;
+}
+
 .our-products__container::before {
   position: absolute;
   content: "";
@@ -2996,6 +3000,10 @@ body.second-theme .main__bg {
   width: 50%;
   height: 60%;
   background: url("../images/ico-plumb-13.png") no-repeat left bottom/contain;
+}
+
+body.second-theme .configure__container::after {
+  background: url("../images/ico-plumb-9-th-2.png") no-repeat center/contain;
 }
 
 .configure__container::after {

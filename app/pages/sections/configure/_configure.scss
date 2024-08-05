@@ -30,16 +30,19 @@
                 height: 60%;
                 background: url('../images/ico-plumb-13.png') no-repeat left bottom / contain;
             }
-    
-            @include for-tablet {
-                &::before {
-                   
-                }
-            }
         }
     }
 
     &__container {
+
+        @include second-theme('configure') {
+            &__container {
+                &::after {
+                    background: url('../images/ico-plumb-9-th-2.png') no-repeat center / contain;
+                }
+            }
+        }
+
         &::after {
             position: absolute;
             z-index: 1;

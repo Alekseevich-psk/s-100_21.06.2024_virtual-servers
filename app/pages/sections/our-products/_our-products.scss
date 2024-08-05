@@ -3,7 +3,15 @@
 
     &__container {
         position: relative;
-        
+
+        @include second-theme('our-products') {
+            &__container {
+                &::before {
+                    background: url('../images/ico-circle-1-th-2.png') no-repeat center / contain;
+                }
+            }
+        }
+
         &::before {
             position: absolute;
             content: "";
@@ -40,7 +48,7 @@
             }
         }
     }
-    
+
     &__s-title {
         position: relative;
         z-index: 2;
