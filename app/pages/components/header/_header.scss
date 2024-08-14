@@ -6,7 +6,7 @@
     z-index: 1000;
 
     &.open-menu {
-        @include for-mobile {
+        @include for-tablet {
             background-color: #F1F8FF;
             box-shadow: $bsh;
             overflow-y: scroll;
@@ -57,7 +57,7 @@
     &__inner {
 
         &--logo {
-            @include for-mobile {
+            @include for-tablet {
                 display: flex;
                 width: 100%;
                 padding: 6px 0 !important;
@@ -74,7 +74,7 @@
             justify-content: space-between;
             align-items: center;
 
-            @include for-mobile {
+            @include for-tablet {
                 order: 2;
                 width: 100%;
                 display: none;
@@ -92,13 +92,13 @@
             justify-content: flex-end;
             padding-bottom: 12px;
 
-            @include for-mobile {
+            @include for-tablet {
                 display: none;
                 border: none;
             }
         }
 
-        @include for-mobile {
+        @include for-tablet {
             padding: 0;
         }
     }
@@ -108,7 +108,7 @@
         position: relative;
         padding-top: 4px;
 
-        @include for-mobile {
+        @include for-tablet {
             padding-top: 0;
         }
 
@@ -142,7 +142,7 @@
                 text-decoration: underline;
             }
 
-            @include for-mobile {
+            @include for-tablet {
                 display: block;
                 margin: 12px 0;
                 text-align: center;
@@ -163,7 +163,7 @@
         background-position: center;
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='40' height='14' viewBox='0 0 40 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.75 1H39.25' stroke='%23525254' stroke-linecap='round'/%3e%3cpath d='M0.75 7H39.25' stroke='%23525254' stroke-linecap='round'/%3e%3cpath d='M0.75 13H39.25' stroke='%23525254' stroke-linecap='round'/%3e%3c/svg%3e ");
 
-        @include for-mobile {
+        @include for-tablet {
             display: block;
         }
     }

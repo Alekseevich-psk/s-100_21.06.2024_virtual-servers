@@ -1,6 +1,6 @@
 include data.pug
 
-header.header#header 
+header.header#header
     .header__container.container 
         .header__wrapper.header__wrapper
             .header__inner.header__inner--logo
@@ -14,6 +14,15 @@ header.header#header
             .header__inner.header__inner--nav
                 .header__menu.menu
                     ul.menu__list
+                        li.menu__item.menu__item--wrapper 
+                            a(href="#", title="title").menu__link Wrapper
+                            ul.menu__sub-list 
+                                li.menu__sub-item 
+                                    a(href="#", title="title").menu__sub-link Выделенные серверы 
+                                li.menu__sub-item 
+                                    a(href="#", title="title").menu__sub-link Item 2
+                                li.menu__sub-item 
+                                    a(href="#", title="title").menu__sub-link Item 3
                         each item in headerMenu 
                             li.menu__item 
                                 a(href=item.link, title=item).menu__link=item.title

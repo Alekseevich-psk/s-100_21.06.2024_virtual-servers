@@ -3,21 +3,125 @@
     justify-content: flex-end;
     align-items: center;
 
-    @include for-mobile {
+    @include for-tablet {
         flex-direction: column;
     }
 
     &__list {
-        @include for-mobile {
+        @include for-tablet {
             order: 2;
+            width: 100%;
+        }
+    }
+
+    &__sub {
+        &-list {
+            position: absolute;
+            display: none;
+            padding: 12px;
+            background-color: $white;
+            top: 32px;
+            left: 50%;
+            box-shadow: $bsh;
+            border-radius: var(--br);
+            transform: translateX(-50%);
+            min-width: 200px;
+
+            @include for-tablet {
+                // display: none;
+                background-color: transparent;
+                box-shadow: none;
+                position: relative;
+                top: 0;
+                width: 100%;
+                padding: 12px 0 6px;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: -12px;
+                left: 0;
+                width: 100%;
+                height: 12px;
+                background-color: transparent;
+            }
+        }
+
+        &-item {
+            display: block;
+            margin-bottom: 12px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-link {
+            text-align: center;
+            display: block;
+            color: $black;
+
+            &:hover {
+                color: $active;
+                text-decoration: underline;
+            }
         }
     }
 
     &__item {
+        position: relative;
         display: inline-block;
         margin: 0 12px;
 
-        @include for-mobile {
+        &--wrapper {
+            padding-right: 16px;
+
+            &:after {
+                position: absolute;
+                transition: $transition;
+                content: "";
+                top: 5px;
+                right: 0;
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_1770_2)'%3e%3cpath d='M4.25939 15.8721C4.12502 15.8721 3.9875 15.8189 3.88437 15.7158C3.67812 15.5096 3.67812 15.1721 3.88437 14.9658L10.9437 7.90645L3.9875 0.950196C3.78125 0.743946 3.78125 0.406446 3.9875 0.200196C4.19375 -0.00605433 4.53125 -0.00605435 4.7375 0.200196L12.0719 7.53145C12.2781 7.7377 12.2781 8.0752 12.0719 8.28145L4.6375 15.7158C4.53125 15.8221 4.39689 15.8721 4.25939 15.8721Z' fill='%23000A14'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_1770_2'%3e%3crect width='16' height='16' fill='white' transform='matrix(-4.37114e-08 -1 -1 4.37114e-08 16 16)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+            }
+
+            &.active {
+                @include for-tablet {
+                    .menu__sub-list {
+                        display: block;
+                    }
+
+                    &:after {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+
+            @include for-tablet {
+                padding-right: 0;
+            }
+
+            @media (min-width: 992px) {
+                &:hover {
+                    .menu__sub-list {
+                        display: block;
+                    }
+
+                    &:after {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+
+        @include for-tablet {
             display: block;
             margin: 12px 0;
             text-align: center;
@@ -39,7 +143,7 @@
     }
 
     &__buttons {
-        @include for-mobile {
+        @include for-tablet {
             width: 100%;
         }
     }
@@ -58,9 +162,6 @@
         @include for-tablet {
             font-size: 14px;
             padding: 10px 30px;
-        }
-
-        @include for-mobile {
             margin: 12px 0 !important;
             display: block;
             width: 100%;

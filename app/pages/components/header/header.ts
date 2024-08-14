@@ -4,6 +4,7 @@
 
     const buttonMenu = header.querySelector(".header__btn-menu");
     const nextEl = header.nextElementSibling as HTMLElement | null;
+    const itemsWrapper = header.querySelectorAll(".menu__item--wrapper") as NodeList;
 
     const heightHeader = heightElem(header);
     const offMarginTopSections = ["main"];
@@ -18,9 +19,7 @@
 
     function getBodyScrollTop() {
         return (
-            self.scrollY ||
-            (document.documentElement && document.documentElement.scrollTop) ||
-            (document.body && document.body.scrollTop)
+            self.scrollY || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop)
         );
     }
 
@@ -45,6 +44,14 @@
     if (buttonMenu !== null) {
         buttonMenu.addEventListener("click", () => {
             header.classList.toggle("open-menu");
+        });
+    }
+
+    if (itemsWrapper.length > 0) {
+        itemsWrapper.forEach((element: HTMLElement) => {
+            element.addEventListener("click", () => {
+                element.classList.toggle("active");
+            });
         });
     }
 
