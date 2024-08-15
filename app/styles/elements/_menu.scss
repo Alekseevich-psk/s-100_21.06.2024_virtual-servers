@@ -28,7 +28,6 @@
             min-width: 200px;
 
             @include for-tablet {
-                // display: none;
                 background-color: transparent;
                 box-shadow: none;
                 position: relative;
@@ -58,9 +57,12 @@
         }
 
         &-link {
-            text-align: center;
             display: block;
             color: $black;
+
+            @include for-tablet {
+                text-align: center;
+            }
 
             &:hover {
                 color: $active;
@@ -109,6 +111,11 @@
             }
 
             @media (min-width: 992px) {
+
+                &:after {
+                    transform: rotate(90deg);
+                }
+                
                 &:hover {
                     .menu__sub-list {
                         display: block;
