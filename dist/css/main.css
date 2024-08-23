@@ -242,7 +242,7 @@ input[type="submit"] {
 }
 
 /**
- * Swiper 11.1.1
+ * Swiper 11.1.4
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -250,7 +250,7 @@ input[type="submit"] {
  *
  * Released under the MIT License
  *
- * Released on: April 9, 2024
+ * Released on: May 30, 2024
  */
 
 /* FONT_START */
@@ -3031,7 +3031,6 @@ body.second-theme .our-products__container::before {
 }
 
 .configure {
-  overflow: hidden;
   padding-bottom: 30px;
 }
 
@@ -3082,6 +3081,7 @@ body.second-theme .configure__container::after {
 
 .configure__wrapper {
   position: relative;
+  align-items: flex-start;
   z-index: 2;
   display: flex;
   justify-content: space-between;
@@ -3107,6 +3107,8 @@ body.second-theme .configure__container::after {
 }
 
 .configure__inner--options {
+  position: relative;
+  padding-bottom: 700px;
   width: 65%;
   padding-right: 32px;
   border-right: 1px solid #a8a8a8;
@@ -3117,6 +3119,8 @@ body.second-theme .configure__container::after {
 }
 
 .configure__inner--res {
+  position: sticky;
+  top: 60px;
   padding-left: 32px;
   width: 35%;
 }
@@ -4635,6 +4639,12 @@ body.second-theme .news__bg-ico:nth-child(2) {
   }
 }
 
+@media screen and (max-width: 1540px) {
+  .configure__container::after {
+    right: 0;
+  }
+}
+
 @media (max-width: 1280px) {
   .button {
     font-size: 24px;
@@ -5035,6 +5045,10 @@ body.second-theme .news__bg-ico:nth-child(2) {
   .our-products__card-pr {
     width: 49%;
     margin-bottom: 28px;
+  }
+
+  .configure {
+    overflow: hidden;
   }
 
   .configure__container::after {

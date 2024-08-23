@@ -1,6 +1,9 @@
 .configure {
-    overflow: hidden;
     padding-bottom: 30px;
+
+    @include for-tablet {
+        overflow: hidden;
+    }
 
     &--servers {
         padding-bottom: 0 !important;
@@ -53,6 +56,10 @@
             width: 50%;
             height: 60%;
             background: url('../images/ico-plumb-9.png') no-repeat center / contain;
+
+            @media screen and (max-width: 1540px) {
+                right: 0;
+            }
         }
 
         @include for-tablet {
@@ -66,6 +73,7 @@
 
     &__wrapper {
         position: relative;
+        align-items: flex-start;
         z-index: 2;
         @include flex-wrap();
 
@@ -109,6 +117,8 @@
     &__inner {
 
         &--options {
+            position: relative;
+            padding-bottom: 700px;
             width: 65%;
             padding-right: 32px;
             border-right: 1px solid #a8a8a8;
@@ -131,6 +141,8 @@
         }
 
         &--res {
+            position: sticky;
+            top: 60px;
             padding-left: 32px;
             width: 35%;
 
